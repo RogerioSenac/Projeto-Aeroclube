@@ -1,0 +1,90 @@
+body {
+    background-color:#00013E;
+}
+/* 
+@font-face {
+    font-family: 'topgun';
+    src: url('../fonts/TOP_GUN.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+.card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #343a40;
+    /* Cor escura para contraste */
+}
+
+.card-title {
+    font-family: 'topgun', sans-serif;
+    color: #D13B3C;
+    text-shadow: 2px 2px 3px #00014F;
+}
+
+.navbar_menu img {
+    width: auto;
+    height: 25vh;
+    object-fit: cover;
+}
+
+.card {     
+    width: 400px;
+    height: 180px;  
+    position: relative;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card-img-top {
+    width: 50%;
+    height: 50%;
+    /* border:50px solid rgb(203, 14, 14); */
+    object-fit: cover;
+}
+
+.card-body {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(123,171,201,0.20);
+    text-align: center;
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+.card-text {
+    margin-top: 55px;
+    font-size: 1.1rem;
+}
