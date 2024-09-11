@@ -1,6 +1,7 @@
 body {
-    background-color:#00013E;
+    background-color: #00013E;
 }
+
 /* 
 @font-face {
     font-family: 'topgun';
@@ -13,8 +14,27 @@ body {
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-.lead .span{
-    color: #D13B3C;
+
+
+span.menu {
+
+    font-weight: bold;
+    color: #000;
+}
+
+
+.containeri {
+    position: absolute;
+    background-color: #fff;
+    margin-top: 40px;
+    margin-left: 300px;
+    width: 80vh;
+    height: 70vh;
+}
+
+
+.containeri .text-center {
+    margin-top: 30px;
 }
 
 .card:hover {
@@ -48,20 +68,20 @@ h1 {
     object-fit: cover;
 }
 
-.card {     
+.card {
     width: 400px;
-    height: 180px;  
+    height: 180px;
     position: relative;
     border: none;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .card-img-top {
@@ -77,7 +97,7 @@ h1 {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(123,171,201,0.20);
+    background: rgba(123, 171, 201, 0.20);
     text-align: center;
     padding: 20px;
 }
