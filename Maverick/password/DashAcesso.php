@@ -24,7 +24,7 @@ include("../conexao.php");
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="menu.php">Início</a>
+                        <a class="nav-link active" aria-current="page" href="../index.php">Início</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Sobre</a>
@@ -63,12 +63,12 @@ include("../conexao.php");
                         <h2 class="text-center">Login</h2>
                         <form action="login.php" method="post">
                             <div class="mb-3">
-                                <label for="username" class="form-label">Usuário:</label>
-                                <input type="text" id="username" name="username" class="form-control" required>
+                                <label for="emailUsuario" class="form-label">Usuário:</label>
+                                <input type="text" id="emailUsuario" name="emailUsuario" class="form-control" required>
                             </div>
                             <div class="mb-3">
-                                <label for="password" class="form-label">Senha:</label>
-                                <input type="password" id="password" name="password" class="form-control" required>
+                                <label for="senhaUsuario" class="form-label">Senha:</label>
+                                <input type="password" id="senhaUsuario" name="senhaUsuario" class="form-control" required>
                             </div>
                             <div class="d-grid">
                                 <button type="submit" class="btn btn-primary">Logar</button>
