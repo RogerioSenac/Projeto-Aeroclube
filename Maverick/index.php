@@ -35,6 +35,7 @@
                     </ul>
                 </div>
             </div>
+        </nav>
             <div class="navbar_menu">
                 <!-- <img class="d-block w-100" src="Assets\images\aeronaves\fundo aviao 1.jpg" alt="Logo "> -->
                 <img src="Assets\images\aeronaves\logo.png" alt="Logo ">
