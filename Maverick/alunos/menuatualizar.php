@@ -93,9 +93,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <!-- Controles de Navegação -->
         <nav aria-label="Page navigation">
             <ul class="pagination justify-content-center">
+                <li class="page-item">
+
+                </li>
                 <li class="page-item <?= $paginaAtual <= 1 ? 'disabled' : '' ?>">
                     <a class="page-link" href="?pagina=<?= $paginaAtual - 1 ?>" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
+                        <span aria-hidden="true">Anterior</span>
                     </a>
                 </li>
                 <?php for ($i = 1; $i <= $totalPaginas; $i++): ?>
@@ -105,13 +108,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <?php endfor; ?>
                 <li class="page-item <?= $paginaAtual >= $totalPaginas ? 'disabled' : '' ?>">
                     <a class="page-link" href="?pagina=<?= $paginaAtual + 1 ?>" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
+                        <span aria-hidden="true">Próximo</span>
                     </a>
                 </li>
+                <a href="DashAluno.php" class="btn btn-secondary">Voltar</a>
             </ul>
         </nav>
 
-        <a href="DashAluno.php" class="btn btn-secondary">Voltar</a>
     </div>
 </body>
 
