@@ -63,9 +63,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Assets/CSS/estiloAluno.css">
     <title>ACADEMY MAVERICK - Novo Registro de Aluno</title>
     <style>
-  
         h1 {
             text-align: center;
             margin-bottom: 2rem;
@@ -93,7 +93,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             /* border: solid; */
             margin: 3px;
         }
-        .mb-4{
+
+        .mb-4 {
             margin-top: 180px;
         }
     </style>
