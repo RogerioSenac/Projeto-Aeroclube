@@ -65,24 +65,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../Assets/CSS/estiloAluno.css">
     <title>ACADEMY MAVERICK - Novo Registro de Aluno</title>
-    <style>
-        h1 {
+    <!-- <style>
+        /* h1 {
             text-align: center;
             margin-bottom: 2rem;
             font-size: 2.5rem;
             font-weight: bold;
             color: #343a40;
             /* Cor escura para contraste */
-        }
+        /* } */
 
-        .info-row {
+        /* .info-row {
             display: flex;
             flex-wrap: wrap;
             /* Permite que os itens se movam para a linha seguinte se não houver espaço */
             justify-content: space-between;
             /* Distribui o espaço entre os itens igualmente */
         }
-
+/* 
         .info-col {
             flex: 1;
             /* Permite que as colunas ocupem o mesmo espaço */
@@ -96,11 +96,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         .mb-4 {
             margin-top: 180px;
-        }
-    </style>
+        } */ */
+    </style> */ -->
 </head>
 
 <body>
+    <div class="navbar_menu">
+        <img src="..\Assets\images\aeronaves\logo.png" alt="Logo ">
+    </div>
     <div class="container my-4">
         <h1 class="mb-4">Novo Registro de Aluno</h1>
         <form method="POST" enctype="multipart/form-data">

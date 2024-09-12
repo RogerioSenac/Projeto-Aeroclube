@@ -2,7 +2,6 @@ body {
     background-color:#00013E;
 }
 
-
 .card {
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
@@ -28,7 +27,7 @@ h1 {
 
 .navbar_menu img {
     width: auto;
-    height: 25vh;
+    height: 20vh;
     object-fit: cover;
 }
 
@@ -37,4 +36,66 @@ h1 {
     height: 50%;
     /* border:50px solid rgb(203, 14, 14); */
     object-fit: cover;
+ 
 }
+
+/*Inicio dos Estilos da tela Inserir Alunos*/
+
+.info-row {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que os itens se movam para a linha seguinte se não houver espaço */
+    justify-content: space-between;
+    /* Distribui o espaço entre os itens igualmente */
+}
+
+.info-col {
+    flex: 1;
+    /* Permite que as colunas ocupem o mesmo espaço */
+    min-width: 0px;
+    /* Define uma largura mínima para as colunas */
+    margin: 0.5rem 0;
+    /* Adiciona margem vertical entre as colunas */
+    /* border: solid; */
+    margin: 3px;
+}
+
+.mb-4 {
+    margin-top: auto;
+}
+
+.form-label{
+    color:#fff;
+}
+
+
+/*Inicio estilos menuatualizarAluino*/
+
+.foto-aluno {
+    width: 30px;
+    height: 30px;
+}
+
+.btn-secondary {
+    margin-left: 1000px;
+}
+
+.table img.foto-aluno {
+    width: 30px;
+    height: 30px;
+    object-fit: cover; /* Garante que a imagem mantenha as proporções e não fique distorcida */
+}
+
+.table th, .table td {
+    text-align: center;
+}
+
+.navbar_menu img {
+    width: 100px; /* Ajuste conforme necessário */
+}
+/* 
+h1 {
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+} */
