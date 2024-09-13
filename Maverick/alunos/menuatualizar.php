@@ -5,7 +5,7 @@ include("../conexao.php");
 $regPorPagina = 10;
 
 // Obtenha o número da página atual a partir da URL (ou defina como 1 se não estiver definido)
-$paginaAtual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
+$paginaAtual = isset($_GET['pagina']) ? (int) $_GET['pagina'] : 1;
 
 // Calcule o offset
 $offset = ($paginaAtual - 1) * $regPorPagina;
@@ -40,9 +40,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
-          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
-          crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../Assets/CSS/estiloAluno.css">
     <title>Academy Maverick - Novo Registro de Alunos</title>
 </head>
@@ -75,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <td>
                             <?php if (!empty($aluno['fotoAluno']) && file_exists('../Assets/images/' . basename($aluno['fotoAluno']))): ?>
                                 <img src="../Assets/images/<?= htmlspecialchars(basename($aluno['fotoAluno'])); ?>"
-                                     alt="Foto do Aluno" class="foto-aluno">
+                                    alt="Foto do Aluno" class="foto-aluno">
                             <?php else: ?>
                                 <span>N/A</span>
                             <?php endif; ?>
@@ -83,7 +82,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <td><?php echo htmlspecialchars($aluno['nomeAluno']) ?></td>
                         <td><?php echo htmlspecialchars($aluno['statusAluno']) ?></td>
                         <td>
-                            <a href="atualizar.php?id=<?php echo $aluno['idAluno']; ?>" class="btn btn-info btn-sm">Atualização</a>
+                            <a href="atualizar.php?id=<?php echo $aluno['idAluno']; ?>"
+                                class="btn btn-info btn-sm">Atualização</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
@@ -114,7 +114,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <a href="DashAluno.php" class="btn btn-secondary">Voltar</a>
             </ul>
         </nav>
-
     </div>
 </body>
 
