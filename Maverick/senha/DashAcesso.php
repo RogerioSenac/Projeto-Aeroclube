@@ -1,9 +1,30 @@
 <?php
 include("../conexao.php");
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nome = $_POST['nomeUsuario'];
+    $email = $_POST['emailUsuario'];
+    $usuario = $_POST['usuario'];
+    $senha = $_POST['senhaUsuario'];
+
+    //Executar a consulta SQL para inserir os dados
+    $novoRegistro = $conexao->prepare(query:'INSERT INTO password (nomeUsuario, emailUsuario, usuario, senhaUsuario) VALUES (:nome,:email,:usuario,:senha)');
+    $novoRegistro->execute(params:[
+        ':nome'=> $nome,
+        'email'=> $email,
+        'usuario'=> $usuario,
+        'senha'=> $senha
+    ]);
+    
+}
 ?>
 
+
+
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,8 +76,8 @@ include("../conexao.php");
                     <h2 class="text-center">Login</h2>
                     <form action="login.php" method="post">
                         <div class="mb-3">
-                            <label for="emailUsuario" class="form-label">Usuário:</label>
-                            <input type="text" id="emailUsuario" name="emailUsuario" class="form-control" required>
+                            <label for="Usuario" class="form-label">Usuário:</label>
+                            <input type="text" id="usuario" name="usuario" class="form-control" required>
                         </div>
                         <div class="mb-3">
                             <label for="senhaUsuario" class="form-label">Senha:</label>
@@ -74,22 +95,22 @@ include("../conexao.php");
                 <!-- Registration Form -->
                 <div id="registrationForm" style="display:none;">
                     <h2 class="text-center">Cadastro</h2>
-                    <form action="register.php" method="post">
+                    <form method="post">
                         <div class="mb-3">
-                            <label for="name" class="form-label">Nome Completo:</label>
-                            <input type="text" id="name" name="name" class="form-control" required>
+                            <label for="nomeUsuario" class="form-label">Nome Completo:</label>
+                            <input type="text" id="nomeUsuario" name="nomeUsuario" class="form-control" required>
                         </div>
                         <div class="mb-3">
-                            <label for="email" class="form-label">Email:</label>
-                            <input type="email" id="email" name="email" class="form-control" required>
+                            <label for="emailUsuario" class="form-label">Email:</label>
+                            <input type="email" id="emailUsuario" name="emailUsuario" class="form-control" required>
                         </div>
                         <div class="mb-3">
-                            <label for="username" class="form-label">Usuário:</label>
-                            <input type="text" id="username" name="username" class="form-control" required>
+                            <label for="usuario" class="form-label">Usuário:</label>
+                            <input type="text" id="usuario" name="usuario" class="form-control" required>
                         </div>
                         <div class="mb-3">
-                            <label for="password" class="form-label">Senha:</label>
-                            <input type="password" id="password" name="password" class="form-control" required>
+                            <label for="senhaUsuario" class="form-label">Senha:</label>
+                            <input type="password" id="senhaUsuario" name="senhaUsuario" class="form-control" required>
                         </div>
                         <div class="d-grid">
                             <button type="submit" class="btn btn-success">Cadastrar</button>
