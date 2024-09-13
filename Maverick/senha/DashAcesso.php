@@ -1,8 +1,6 @@
 <?php
 include("../conexao.php");
 
-$buscaCadastro = $conexao->query("SELECT * FROM password ORDER BY nomeUsuario ASC");
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nome = $_POST['nomeUsuario'];
     $email = $_POST['emailUsuario'];
@@ -10,7 +8,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $senha = $_POST['senhaUsuario'];
 
     //Executar a consulta SQL para inserir os dados
-    $novoRegistro = $cone
+    $novoRegistro = $conexao->prepare(query:" INSERT INTO password (nomeUsuario, emailUsuario, usuario, senhaUsuario) VALUES(:nome,:email,:usuario,:senha");
+    $novoRegistro->execute(params:[
+        ':nome'=> $nome,
+        'email'=> $email,
+        'usuario'=> $usuario,
+        'senha'=> $senha
+    ]);
+    
 }
 ?>
 
