@@ -9,6 +9,7 @@ include("../conexao.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aero Clube - Acesso</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../Assets/CSS/estiloSenha.css">
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -36,8 +37,8 @@ include("../conexao.php");
     <div class="container mt-5">
         <div class="text-center mb-5">
             <h1>Bem-vindo ao Aero Clube</h1>
-            <p class="lead"><span>A Vida </span>é feita de escolhas e nós....</p>
-            <p class="lead">bem, nós escolhemos <span>VOAR!</span></p>
+            <p class="lead"><span class="alerta">A Vida </span>é feita de escolhas e nós....</p>
+            <p class="lead">bem, nós escolhemos <span class="alerta">VOAR!</span></p>
         </div>
 
         <div class="row justify-content-center">
@@ -54,12 +55,12 @@ include("../conexao.php");
                     <h2 class="text-center">Login</h2>
                     <form action="login.php" method="post">
                         <div class="mb-3">
-                            <label for="username" class="form-label">Usuário:</label>
-                            <input type="text" id="username" name="username" class="form-control" required>
+                            <label for="emailUsuario" class="form-label">Usuário:</label>
+                            <input type="text" id="emailUsuario" name="emailUsuario" class="form-control" required>
                         </div>
                         <div class="mb-3">
-                            <label for="password" class="form-label">Senha:</label>
-                            <input type="password" id="password" name="password" class="form-control" required>
+                            <label for="senhaUsuario" class="form-label">Senha:</label>
+                            <input type="password" id="senhaUsuario" name="senhaUsuario" class="form-control" required>
                         </div>
                         <div class="d-grid">
                             <button type="submit" class="btn btn-primary">Logar</button>
