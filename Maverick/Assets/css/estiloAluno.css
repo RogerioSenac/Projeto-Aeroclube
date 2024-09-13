@@ -61,7 +61,7 @@ h1 {
 }
 
 .mb-4 {
-    margin-top: auto;
+    margin-top: -20px;
 }
 
 .form-label{
@@ -77,7 +77,8 @@ h1 {
 }
 
 .btn-secondary {
-    margin-left: 1000px;
+    margin-left: 900px;
+    border: solid red;
 }
 
 .table img.foto-aluno {
@@ -91,7 +92,7 @@ h1 {
 }
 
 .navbar_menu img {
-    width: 190px; /* Ajuste conforme necessário */
+    width: 170px; /* Ajuste conforme necessário */
 }
 /* 
 h1 {
