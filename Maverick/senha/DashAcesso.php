@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $senha = $_POST['senhaUsuario'];
 
     //Executar a consulta SQL para inserir os dados
-    $novoRegistro = $conexao->prepare(query:" INSERT INTO password (nomeUsuario, emailUsuario, usuario, senhaUsuario) VALUES(:nome,:email,:usuario,:senha");
+    $novoRegistro = $conexao->prepare(query:'INSERT INTO password (nomeUsuario, emailUsuario, usuario, senhaUsuario) VALUES (:nome,:email,:usuario,:senha)');
     $novoRegistro->execute(params:[
         ':nome'=> $nome,
         'email'=> $email,
@@ -76,8 +76,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <h2 class="text-center">Login</h2>
                     <form action="login.php" method="post">
                         <div class="mb-3">
-                            <label for="emailUsuario" class="form-label">Usuário:</label>
-                            <input type="text" id="emailUsuario" name="emailUsuario" class="form-control" required>
+                            <label for="Usuario" class="form-label">Usuário:</label>
+                            <input type="text" id="usuario" name="usuario" class="form-control" required>
                         </div>
                         <div class="mb-3">
                             <label for="senhaUsuario" class="form-label">Senha:</label>
@@ -95,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <!-- Registration Form -->
                 <div id="registrationForm" style="display:none;">
                     <h2 class="text-center">Cadastro</h2>
-                    <form action="register.php" method="post">
+                    <form method="post">
                         <div class="mb-3">
                             <label for="nomeUsuario" class="form-label">Nome Completo:</label>
                             <input type="text" id="nomeUsuario" name="nomeUsuario" class="form-control" required>
