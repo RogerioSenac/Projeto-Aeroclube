@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Verificar se algum usuário foi encontrado
     if ($consulta->rowCount() > 0) {
         // Credenciais válidas, redirecionar para index.php
-        header("Location: ../index.php");
+        header("Location: ./index.php");
         exit(); // Importante para garantir que o script seja encerrado após o redirecionamento
     } else {
         // Credenciais inválidas, redirecionar de volta com mensagem de erro
