@@ -109,20 +109,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <h2 class="text-center">Cadastro</h2>
                     <form action="cadastro.php" method="post">
                         <div class="mb-3">
-                            <label for="nomeUsuario" class="form-label">Nome Completo:</label>
-                            <input type="text" id="nomeUsuario" name="nomeUsuario" class="form-control" required>
+                            <label for="nomeCompleto" class="form-label">Nome Completo:</label>
+                            <input type="text" id="nomeCompleto" name="nomeCompleto" class="form-control" required>
                         </div>
                         <div class="mb-3">
-                            <label for="emailUsuario" class="form-label">Email:</label>
-                            <input type="email" id="emailUsuario" name="emailUsuario" class="form-control" required>
+                            <label for="email" class="form-label">Email:</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
                         </div>
                         <div class="mb-3">
                             <label for="usuario" class="form-label">Usuário:</label>
                             <input type="text" id="usuario" name="usuario" class="form-control" required>
                         </div>
                         <div class="mb-3">
-                            <label for="senhaUsuario" class="form-label">Senha:</label>
-                            <input type="password" id="senhaUsuario" name="senhaUsuario" class="form-control" required>
+                            <label for="senha" class="form-label">Senha:</label>
+                            <input type="password" id="senha" name="senha" class="form-control" required>
                         </div>
                         <div class="d-grid">
                             <button type="submit" class="btn btn-success">Cadastrar</button>
