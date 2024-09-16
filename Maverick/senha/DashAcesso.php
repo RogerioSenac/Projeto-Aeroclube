@@ -2,26 +2,31 @@
 include("../conexao.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Obter os dados do formulário
     $nome = $_POST['nomeUsuario'];
     $email = $_POST['emailUsuario'];
     $usuario = $_POST['usuario'];
     $senha = $_POST['senhaUsuario'];
 
-    //Executar a consulta SQL para inserir os dados
-    $novoRegistro = $conexao->prepare(query:'INSERT INTO password (nomeUsuario, emailUsuario, usuario, senhaUsuario) VALUES (:nome,:email,:usuario,:senha)');
-    $novoRegistro->execute(params:[
-        ':nome'=> $nome,
-        'email'=> $email,
-        'usuario'=> $usuario,
-        'senha'=> $senha
+    // Preparar e executar a consulta SQL para inserir os dados
+    $novoRegistro = $conexao->prepare('INSERT INTO password (nomeUsuario, emailUsuario, usuario, senhaUsuario) VALUES (:nome, :email, :usuario, :senha)');
+    $executado = $novoRegistro->execute([
+        'nome' => $nome,
+        'email' => $email,
+        'usuario' => $usuario,
+        'senha' => $senha
     ]);
-    
+
+    // Verificar se a execução foi bem-sucedida e redirecionar
+    if ($executado) {
+        header("Location: index.php");
+        exit(); // Importante para garantir que o script seja encerrado após o redirecionamento
+    } else {
+        // Tratar erro de inserção (opcional)
+        echo "Erro ao registrar. Tente novamente.";
+    }
 }
 ?>
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -76,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <h2 class="text-center">Login</h2>
                     <form action="login.php" method="post">
                         <div class="mb-3">
-                            <label for="Usuario" class="form-label">Usuário:</label>
+                            <label for="usuario" class="form-label">Usuário:</label>
                             <input type="text" id="usuario" name="usuario" class="form-control" required>
                         </div>
                         <div class="mb-3">
@@ -141,8 +146,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         }
     </script>
-</body>
-</html>
-
 </body>
 </html>
