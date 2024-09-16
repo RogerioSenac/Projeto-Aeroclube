@@ -6,25 +6,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $usuario = $_POST['usuario'];
     $senha = $_POST['senhaUsuario'];
 
-    // Preparar e executar a consulta SQL para verificar as credenciais
-    $consulta = $conexao->prepare('SELECT * FROM passsword WHERE usuario = :usuario AND senhaUsuario = :senha');
-    $consulta->execute([
-        'usuario' => $usuario,
-        'senha' => $senha
-    ]);
+    try {
+        // Preparar e executar a consulta SQL para verificar as credenciais
+        $consulta = $conexao->prepare('SELECT * FROM acesso WHERE usuario = :usuario AND senhaUsuario = :senha');
+        $consulta->execute([
+            'usuario' => $usuario,
+            'senha' => $senha
+        ]);
 
-    // Verificar se algum usuário foi encontrado
-    if ($consulta->rowCount() > 0) {
-        // Credenciais válidas, redirecionar para index.php
-        header("Location: ./index.php");
-        exit(); // Importante para garantir que o script seja encerrado após o redirecionamento
-    } else {
-        // Credenciais inválidas, redirecionar de volta com mensagem de erro
-        header("Location: login.php?error=invalid_credentials");
-        exit();
+        // Verificar se algum usuário foi encontrado
+        if ($consulta->rowCount() > 0) {
+            // Credenciais válidas, redirecionar para index.php
+            header("Location: ../index.php");
+            exit(); // Importante para garantir que o script seja encerrado após o redirecionamento
+        } else {
+            // Credenciais inválidas, redirecionar de volta com mensagem de erro
+            header("Location: login.php?error=invalid_credentials");
+            exit();
+        }
+    } catch (PDOException $e) {
+        // Em caso de erro, exibir mensagem
+        echo "Erro: " . $e->getMessage();
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
