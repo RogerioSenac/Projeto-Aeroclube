@@ -18,65 +18,67 @@ include("../conexao.php");
 </head>
 
 <body>
-    <div class="navbar_menu">
-        <img src="..\Assets\images\aeronaves\logo.png" alt="Logo ">
-    </div>
     <div class="container my-4">
-        <h1>Controle de Registro de Alunos</h1>
-        <div class="row">
-            <!-- Card 1 -->
-            <div class="col-md-3 mb-3">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <i class="fa-xl fas fa-user-graduate card-icon"></i>
-                        <h5 class="card-title">Incluir Registro</h5>
-                        <p class="card-text">Incluir registro.</p>
-                        <a href="inserirAluno.php" class="btn btn-primary">Acessar</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="col-md-3 mb-3">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <i class="fa-solid fa-person-booth"></i>
-                        <h5 class="card-title">Atualização</h5>
-                        <p class="card-text">Atualizar registro.</p>
-                        <a href="menuatualizar.php" class="btn btn-primary">Acessar</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="col-md-3 mb-3">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <i class="fa-solid fa-street-view"></i>
-                        <h5 class="card-title">Consulta</h5>
-                        <p class="card-text">Consulta registros.</p>
-                        <a href="menuvisualizar.php" class="btn btn-primary">Acessar</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="col-md-3 mb-3">
-                <div class="card text-center">
-                    <div class="card-body">
-                        <i class="fa-xl fa-sharp fa-solid fa-user-slash"></i>
-                        <h5 class="card-title">Cancelamentos</h5>
-                        <p class="card-text">Cancelar registro.</p>
-                        <a href="menuapagar.php" class="btn btn-danger">Acessar</a>
-                    </div>
-                </div>
-            </div>
+        <div class="navbar_menu">
+            <img src="..\Assets\images\aeronaves\logo.png" alt="Logo ">
         </div>
-        <a href="../menu.php" class="btn btn-secondary">Voltar</a>
-    </div>
+        <div class="container my-4">
+            <h1>Controle de Registro de Alunos</h1>
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="col-md-3 mb-3">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fa-xl fas fa-user-graduate card-icon"></i>
+                            <h5 class="card-title">Incluir Registro</h5>
+                            <p class="card-text">Incluir registro.</p>
+                            <a href="inserirAluno.php" class="btn btn-primary">Acessar</a>
+                        </div>
+                    </div>
+                </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-..."
-        crossorigin="anonymous"></script>
+                <!-- Card 2 -->
+                <div class="col-md-3 mb-3">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fa-solid fa-person-booth"></i>
+                            <h5 class="card-title">Atualização</h5>
+                            <p class="card-text">Atualizar registro.</p>
+                            <a href="menuatualizar.php" class="btn btn-primary">Acessar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-3 mb-3">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fa-solid fa-street-view"></i>
+                            <h5 class="card-title">Consulta</h5>
+                            <p class="card-text">Consulta registros.</p>
+                            <a href="menuvisualizar.php" class="btn btn-primary">Acessar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-md-3 mb-3">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fa-xl fa-sharp fa-solid fa-user-slash"></i>
+                            <h5 class="card-title">Cancelamentos</h5>
+                            <p class="card-text">Cancelar registro.</p>
+                            <a href="menuapagar.php" class="btn btn-danger">Acessar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="../menu.php" class="btn btn-secondary">Voltar</a>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-..." crossorigin="anonymous"></script>
+    </div>
 </body>
 
 </html>
