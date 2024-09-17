@@ -63,7 +63,7 @@ $exibirAlunos = $buscarAluno->fetchAll(PDO::FETCH_ASSOC);
                 </tr>
             <?php endforeach; ?>
         </table>
-        <a href="../index.php" class="btn btn-secondary">Voltar</a>
+        <a href="../menu.php" class="btn btn-secondary">Voltar</a>
     </div>
 </body>
 
