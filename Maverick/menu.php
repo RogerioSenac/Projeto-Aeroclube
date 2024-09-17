@@ -55,7 +55,7 @@ $usuario = $_SESSION['usuario'];
                     <img class="card-img-top" src="Assets/images/aeronaves/aviao1.jpg">
                     <div class="card-body">
                         <h1 class="card-text">Controle de Instrutores da academia.</h1>
-                        <a href="alunos/DashAluno.php" class="btn btn-primary">Acessar</a>
+                        <a href="instrutores/DashInstrutor.php" class="btn btn-primary">Acessar</a>
                     </div>
                 </div>
             </div>

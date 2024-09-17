@@ -24,8 +24,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (move_uploaded_file($foto['tmp_name'], $caminhoImagem)) {
         // Preparar e executar a consulta SQL para inserir os dados
         $stmt = $conexao->prepare("
-        INSERT INTO alunos (nomeInstr, dataNascInstr, matriculaInstr, breveInstr, endInstr, bairroInstr, cityInstr, estadoInstr, cepInstr, foneInstr, emaiInstr, fotoInstr) 
-        VALUES (:nomeAluno,:dataNasc,:matriculaInstr,:breveInstr,:ruaAluno,:bairroAluno,:cityAluno,:estadoAluno,:cepAluno,:foneAluno,:emailAluno,:fotoAluno)");
+        INSERT INTO intrutores (nomeInstr, dataNascInstr, matriculaInstr, breveInstr, endInstr, bairroInstr, cityInstr, estadoInstr, cepInstr, foneInstr, emaiInstr, fotoInstr) 
+        VALUES (:nomeinstr,:dataNascInstr,:matriculaInstr,:breveInstr,:endInstr,:bairroInstr,:cityInstr,:estadoInstr,:cepInstr,:foneInstr,:emailInstr,:fotoinstr)");
 
         // Certifique-se de definir as variáveis $dtNasc e $estadoAluno
         $stmt->execute([
