@@ -42,6 +42,7 @@ include("../conexao.php");
     <div class="container my-4">
         <h1>Bem-vindo à Academy Maverick - Top Gun</h1>
         <div class="row">
+
             <!-- Card 1 -->
             <div class="col-md-4 mb-4">
                 <div class="card text-center">
@@ -78,7 +79,7 @@ include("../conexao.php");
                 </div>
             </div>
         </div>
-        <a href="../index.php" class="btn btn-secondary">Voltar</a>
+        <a href="../menu.php" class="btn btn-secondary">Voltar</a>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-..."
