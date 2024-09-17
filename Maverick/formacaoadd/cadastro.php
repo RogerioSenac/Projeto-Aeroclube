@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $novaFormacao->execute([$formacao]);
 
-    header('Location: index.php');
+    header('Location: menu.php');
 }
 ?>
 
@@ -53,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </tr>
             <?php endforeach; ?>   
         </table>
-        <a href="../index.php" class="btn btn-secondary">Voltar</a>
+        <a href="../menu.php" class="btn btn-secondary">Voltar</a>
     </div>
 </body>
 </html>
