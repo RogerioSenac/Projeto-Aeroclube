@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $novoAluno = $conexao->prepare("INSERT INTO alunos (nomeAluno) VALUE (?)");
     $novoAluno->execute([$aluno]);
 
-    header('Location: index.php');
+    header('Location: menu.php');
 }
 ?>
 
