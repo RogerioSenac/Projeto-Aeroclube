@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $novaFormacao->execute([$formacao]);
 
-    header('Location: index.php');
+    header('Location: menu.php');
 }
 ?>
 
