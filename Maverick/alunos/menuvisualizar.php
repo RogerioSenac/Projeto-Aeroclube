@@ -82,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <td><?php echo htmlspecialchars($aluno['nomeAluno']) ?></td>
                         <td><?php echo htmlspecialchars($aluno['statusAluno']) ?></td>
                         <td>
-                            <a href="atualizar.php?id=<?php echo $aluno['idAluno']; ?>"
+                            <a href="visualizar.php?id=<?php echo $aluno['idAluno']; ?>"
                                 class="btn btn-info btn-sm">Consultar</a>
                         </td>
                     </tr>
