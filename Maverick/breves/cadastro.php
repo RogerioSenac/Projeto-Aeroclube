@@ -12,7 +12,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $breve = $_POST["numBreve"];
     $novoBreve = $conexao->prepare("INSERT INTO brevees_emitidos (numBreve) VALUE (?)");
     $novoBreve->execute(["$breve"]);
-    header('Location: index.php');
+    header('Location: menu.php');
 }
 ?>
 
@@ -54,7 +54,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 </tr>
             <?php endforeach; ?>
         </table>
-        <a href="../index.php" class="btn btn-secondary">Voltar</a>
+        <a href="../menu.php" class="btn btn-secondary">Voltar</a>
     </div>
 </body>
 </html>

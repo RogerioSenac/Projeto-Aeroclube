@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $breve = $_POST["numBreve"];
     $novoBreve = $conexao->prepare("INSERT INTO brevees_emitidos (numBreve) VALUE (?)");
     $novoBreve->execute(["$breve"]);
-    header('Location: index.php');
+    header('Location: menu.php');
 }
 ?>
 
