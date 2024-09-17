@@ -66,7 +66,7 @@ $usuario = $_SESSION['usuario'];
                     <img class="card-img-top" src="Assets/images/aeronaves/aviao1.jpg">
                     <div class="card-body">
                         <h1 class="card-text">Controle dos Registros de Voos.</h1>
-                        <a href="alunos/DashAluno.php" class="btn btn-primary">Acessar</a>
+                        <a href="registrosVoos/DashRegistro.php" class="btn btn-primary">Acessar</a>
                     </div>
                 </div>
             </div>
@@ -77,7 +77,7 @@ $usuario = $_SESSION['usuario'];
                     <img class="card-img-top" src="Assets/images/aeronaves/aviao1.jpg">
                     <div class="card-body">
                         <h1 class="card-text">Controle dos Pareceres de Voos.</h1>
-                        <a href="alunos/DashAluno.php" class="btn btn-primary">Acessar</a>
+                        <a href="pareceres/DashParecer.php" class="btn btn-primary">Acessar</a>
                     </div>
                 </div>
             </div>
@@ -88,7 +88,7 @@ $usuario = $_SESSION['usuario'];
                     <img class="card-img-top" src="Assets/images/aeronaves/aviao1.jpg">
                     <div class="card-body">
                         <h1 class="card-text">Adicione novas formações.</h1>
-                        <a href="alunos/DashAluno.php" class="btn btn-primary">Acessar</a>
+                        <a href="formacaoadd/DashFormacao.php" class="btn btn-primary">Acessar</a>
                     </div>
                 </div>
             </div>
@@ -99,7 +99,7 @@ $usuario = $_SESSION['usuario'];
                     <img class="card-img-top" src="Assets/images/aeronaves/aviao1.jpg">
                     <div class="card-body">
                         <h1 class="card-text">Gerencie os novos breves.</h1>
-                        <a href="alunos/DashAluno.php" class="btn btn-primary">Acessar</a>
+                        <a href="breves/DashBreve.php" class="btn btn-primary">Acessar</a>
                     </div>
                 </div>
             </div>
