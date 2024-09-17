@@ -27,7 +27,7 @@ h1 {
 
 .navbar_menu img {
     width: auto;
-    height: 20vh;
+    height: 25vh;
     object-fit: cover;
 }
 
@@ -61,7 +61,7 @@ h1 {
 }
 
 .mb-4 {
-    margin-top: -20px;
+    margin-top: -1000px;
 }
 
 .form-label{
@@ -108,3 +108,29 @@ h1 {
     border: none;
 }
 
+
+/*Inicio dos Estilos da tela Consulta Alunos*/
+
+.card-profile {
+    text-align: center;
+    /* Centraliza o conteúdo dentro do card */
+    padding: 2rem;
+}
+
+.card-profile img {
+    max-width: 150px;
+    /* Limita a largura máxima da imagem */
+    max-height: 150px;
+    /* Limita a altura máxima da imagem */
+    border-radius: 50%;
+    /* Cria um efeito circular para a imagem */
+    object-fit: cover;
+    /* Mantém a proporção da imagem e preenche o card */
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+    /* Sombra leve para a imagem */
+}
+
+.imgPerfil {
+    height: 150px;
+    width: 150px;
+}

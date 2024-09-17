@@ -17,6 +17,7 @@ $aluno = $buscarAluno->fetch(PDO::FETCH_ASSOC);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Assets/css/estiloAluno.css">
     <title>ACADEMY MAVERICK - Consulta de dados do Registro de Alunos</title>
     <style>
         .card-profile {
@@ -118,7 +119,11 @@ $aluno = $buscarAluno->fetch(PDO::FETCH_ASSOC);
 </head>
 
 <body>
-    <div class="container mt-5">
+    <div class="container my-4">
+        <div class="navbar_menu">
+            <img src="..\Assets\images\aeronaves\logo.png" alt="Logo ">
+        </div>
+
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <h1 class="my-4">Consulta de dados do Registro de Alunos</h1>
@@ -135,15 +140,15 @@ $aluno = $buscarAluno->fetch(PDO::FETCH_ASSOC);
                 </div>
                 <div class="card-body card-info">
                     <div class="info-row">
-                        <div class="info-col-id">
+                        <div class="info-col">
                             <p><strong>ID:</strong> <?= htmlspecialchars($aluno['idAluno']); ?>
                             </p>
                         </div>
-                        <div class="info-col-nome">
+                        <div class="info-col">
                             <p><strong><?= htmlspecialchars($aluno['nomeAluno']); ?></strong></p>
                         </div>
-                        <div class="info-col-idade">
-                            <p><strong>Data Nascimento:</strong><?= htmlspecialchars($aluno['dataNasc']); ?>
+                        <div class="info-col">
+                            <p><strong>Data Nascimento: </strong><?= htmlspecialchars($aluno['dataNasc']); ?>
                             </p>
                         </div>
                     </div>
@@ -179,10 +184,10 @@ $aluno = $buscarAluno->fetch(PDO::FETCH_ASSOC);
 
                     <div class="info-row">
                         <div class="info-col">
-                            <p><strong>Status:</strong> <?= htmlspecialchars($aluno['statusAluno']) ?></p>
+                            <p><strong>Data Matricula:</strong> <?= htmlspecialchars($aluno['data_matricula']) ?></p>
                         </div>
                         <div class="info-col">
-                            <p><strong>Data Matricula:</strong> <?= htmlspecialchars($aluno['data_matricula']) ?></p>
+                            <p><strong>Status:</strong> <?= htmlspecialchars($aluno['statusAluno']) ?></p>
                         </div>
                     </div>
                 </div>
