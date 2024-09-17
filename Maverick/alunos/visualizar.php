@@ -17,9 +17,9 @@ $aluno = $buscarAluno->fetch(PDO::FETCH_ASSOC);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../Assets/css/estiloAluno.css">
+    <link rel="stylesheet" href="../Assets/css/estiloVisualizar.css">
     <title>ACADEMY MAVERICK - Consulta de dados do Registro de Alunos</title>
-    <style>
+    <!-- <style>
         .card-profile {
             text-align: center;
             /* Centraliza o conteúdo dentro do card */
@@ -115,7 +115,7 @@ $aluno = $buscarAluno->fetch(PDO::FETCH_ASSOC);
             height: 30px;
 
         }
-    </style>
+    </style> -->
 </head>
 
 <body>

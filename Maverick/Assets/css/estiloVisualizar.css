@@ -1,0 +1,114 @@
+body {
+    background-color:#00013E;
+}
+
+.navbar_menu img {
+    width: auto;
+    height: 25vh;
+    object-fit: cover;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    /* Cor escura para contraste */
+}
+
+.card-profile {
+    text-align: center;
+    /* Centraliza o conteúdo dentro do card */
+    padding: 2rem;
+}
+
+.card-profile img {
+    max-width: 150px;
+    /* Limita a largura máxima da imagem */
+    max-height: 150px;
+    /* Limita a altura máxima da imagem */
+    border-radius: 50%;
+    /* Cria um efeito circular para a imagem */
+    object-fit: cover;
+    /* Mantém a proporção da imagem e preenche o card */
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+    /* Sombra leve para a imagem */
+}
+
+.imgPerfil {
+    height: 150px;
+    width: 150px;
+}
+
+.card {
+    width: 850px;
+    /* Define a largura do card */
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+    /* Adiciona sombra ao card */
+}
+
+.card-body {
+    padding-top: 0;
+    /* Remove o padding superior padrão do card */
+}
+
+.card-info {
+    margin-top: 1rem;
+    /* Adiciona espaçamento entre a imagem e as informações */
+}
+
+.info-row {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que os itens se movam para a linha seguinte se não houver espaço */
+    justify-content: space-between;
+    /* Distribui o espaço entre os itens igualmente */
+}
+
+.info-col {
+    flex: 1;
+    /* Permite que as colunas ocupem o mesmo espaço */
+    min-width: 0px;
+    /* Define uma largura mínima para as colunas */
+    margin: 0.5rem 0;
+    /* Adiciona margem vertical entre as colunas */
+}
+
+.info-col p {
+    margin: 0;
+    /* Remove a margem dos parágrafos */
+}
+
+.info-col h4 {
+    margin: 0;
+    /* Remove a margem dos parágrafos */
+}
+
+.btn-secondary {
+    margin-left: 1000px;
+}
+
+.my-4 {
+    text-align: center;
+    text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.info-col-id {
+    width: 50px;
+    height: 30px;
+}
+
+.info-col-nome {
+    position: absolute;
+    margin-left: 60px;
+    height: 30px;
+
+}
+
+.info-col-idade {
+    position: absolute;
+    margin-left: 395px;
+    height: 30px;
+
+}
