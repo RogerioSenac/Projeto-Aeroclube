@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $novoInstr->execute([$instrutor]);
 
-    header('Location: index.php');
+    header('Location: menu.php');
 }
 ?>
 
