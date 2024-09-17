@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['usuario'] = $user['usuario']; // Armazena o nome do usuário na sessão
         
         // Redireciona para o painel ou outra página
-        header("Location: ../index.php"); // Supondo que você tenha um index.php ou painel
+        header("Location: ../menu.php"); // Supondo que você tenha um index.php ou painel
         exit;
     } else {
         // Falha no login: redireciona de volta para a página de login com uma mensagem de erro
