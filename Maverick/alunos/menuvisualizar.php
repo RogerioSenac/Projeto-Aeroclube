@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <div class="container my-4">
 
-        <div class="navbar_menu mb-4">
+        <div class="navbar_menu">
             <img src="../Assets/images/aeronaves/logo.png" alt="Logo">
         </div>
 
