@@ -74,61 +74,51 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="container my-4">
         <h1 class="mb-4">Novo Registro de Aluno</h1>
         <form method="POST" enctype="multipart/form-data">
-            <div class="info-row">
-                <div class="info-col">
+            <div class="row justify-content-md-center">
+                <div class="col col-lg-10">
                     <label form="nomeAluno" class="form-label">Nome</label>
                     <input type="text" class="form-control" id="nomeAluno" name="nomeAluno" required>
                 </div>
-                <div class="info-col">
+                <div class="col col-lg-2">
                     <label form="dataNasc" class="form-label">Data Nascimento</label>
                     <input type="text" class="form-control" id="dataNasc" name="dataNasc" required>
                 </div>
-            </div>
-
-            <div class="info-row">
-                <div class="info-col">
+                <div class="col col-lg-6">
                     <label form="ruaAluno" class="form-label">Endereço</label>
                     <input type="text" class="form-control" id="ruaAluno" name="ruaAluno" required>
                 </div>
-                <div class="info-col">
+                <div class="col col-lg-6">
                     <label form="bairroAluno" class="form-label">Bairro</label>
                     <input type="text" class="form-control" id="bairroAluno" name="bairroAluno" required>
                 </div>
-            </div>
-
-            <div class="info-row">
-                <div class="info-col">
+                <div class="col col-lg-4">
                     <label form="cityAluno" class="form-label">Cidade</label>
                     <input type="text" class="form-control" id="cityAluno" name="cityAluno" required>
                 </div>
-                <div class="info-col">
+                <div class="col col-lg-4">
                     <label form="estadoAluno" class="form-label">Estado</label>
                     <input type="text" class="form-control" id="estadoAluno" name="estadoAluno" required>
                 </div>
-                <div class="info-col">
+                <div class="col col-lg-4">
                     <label form="cepAluno" class="form-label">CEP</label>
                     <input type="text" class="form-control" id="cepAluno" name="cepAluno" required>
                 </div>
-            </div>
-
-            <div class="info-row">
-                <div class="info-col">
+                <div class="col col-lg-6">
                     <label form="foneAluno" class="form-label">Fone</label>
                     <input type="text" class="form-control" id="foneAluno" name="foneAluno" required>
                 </div>
-                <div class="info-col">
+                <div class="col col-lg-6">
                     <label form="emailAluno" class="form-label">Email</label>
                     <input type="text" class="form-control" id="emailAluno" name="emailAluno" required>
                 </div>
-            </div>
-
-            <div class="mb-3">
-                <label for="fotoAluno" class="form-label">Foto do Aluno:</label>
-                <input type="file" class="form-control" id="fotoAluno" name="fotoAluno" accept="image/*">
-            </div>
-            <div class="mb-3">
-                <button type="submit" class="btn btn-success">Gravar Registro</button>
-                <a href="DashAluno.php" class="btn btn-secondary">Voltar</a>
+                <div class="col col-lg-12">
+                    <label for="fotoAluno" class="form-label">Foto do Aluno:</label>
+                    <input type="file" class="form-control" id="fotoAluno" name="fotoAluno" accept="image/*">
+                </div>
+                <div class="mb-4">
+                    <button type="submit" class="btn btn-success">Gravar Registro</button>
+                    <a href="DashAluno.php" class="btn btn-secondary">Voltar</a>
+                </div>
             </div>
         </form>
     </div>
