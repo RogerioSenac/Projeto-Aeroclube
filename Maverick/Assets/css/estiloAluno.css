@@ -26,18 +26,19 @@ h1 {
 }
 
 .navbar_menu img {
+    margin-top: 10px;
     width: auto;
-    height: 25vh;
+    height: 20vh;
     object-fit: cover;
 }
 
-/* .card-img-top {
+.card-img-top {
     width: 50%;
     height: 50%;
-    /* border:50px solid rgb(203, 14, 14); */
+    border:50px solid rgb(203, 14, 14);
     object-fit: cover;
  
-} */
+}
 
 /*Inicio dos Estilos da tela Inserir Alunos*/
 
@@ -61,7 +62,7 @@ h1 {
 }
 
 .mb-4 {
-    margin-top: -1000px;
+    margin-top: -100px;
 }
 
 .form-label{
@@ -87,6 +88,9 @@ h1 {
     object-fit: cover; /* Garante que a imagem mantenha as proporções e não fique distorcida */
 }
 
+.table {
+    margin-top: 60px;
+}
 .table th, .table td {
     text-align: center;
 }
