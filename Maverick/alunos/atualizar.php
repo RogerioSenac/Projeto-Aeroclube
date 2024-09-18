@@ -130,9 +130,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 </div>
             </div>
         </form>
+        <button type="submit" class="btn btn-primary">Atualizar</button>
+        <a href="DashAluno.php" class="btn btn-secondary">Voltar</a>
     </div>
-    <button type="submit" class="btn btn-primary">Atualizar</button>
-    <a href="DashAluno.php" class="btn btn-secondary">Voltar</a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-..."
         crossorigin="anonymous"></script>
