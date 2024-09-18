@@ -35,12 +35,14 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <style>
+        <link rel="stylesheet" href="../Assets/css/estiloAtualizar.css">
+    <!-- <style>
         .form-label {
             font-weight: bold;
             color: #343a40;
             /* Cor de destaque para a label */
         }
+
         .form-control,
         .form-select {
             border: none;
@@ -88,6 +90,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             margin: 0.5rem 0;
             /* Adiciona margem vertical entre as colunas */
         }
+
         .btn-primary {
             margin-left: 1430px;
             margin-right: 0;
@@ -96,12 +99,14 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         .btn-secondary {
             margin-left: 10px;
         }
-
-    </style>
+    </style> -->
     <title>Academy Maverick - Atualização de Registro</title>
 </head>
 
 <body>
+    <div class="navbar_menu">
+        <img src="..\Assets\images\aeronaves\logo.png" alt="Logo ">
+    </div>
     <div class="container my-4">
         <div class="card">
             <div class="card-header">
@@ -163,7 +168,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                             <label for="emailAluno" class="form-label">Email</label>
                             <input type="text" class="form-control" id="emailAluno" name="emailAluno"
                                 value="<?php echo htmlspecialchars($aluno['emailAluno']); ?>" required>
-                        </div> 
+                        </div>
                         <div class="col-md-4">
                             <label for="statusAluno" class="form-label">Status</label>
                             <select class="form-select" id="statusAluno" name="statusAluno" required>

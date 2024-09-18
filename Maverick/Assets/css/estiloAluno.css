@@ -28,16 +28,15 @@ h1 {
 .navbar_menu img {
     margin-top: 10px;
     width: auto;
-    height: 20vh;
+    height: 15vh;
     object-fit: cover;
 }
 
 .card-img-top {
     width: 50%;
     height: 50%;
-    border:50px solid rgb(203, 14, 14);
+    border: 50px solid rgb(203, 14, 14);
     object-fit: cover;
- 
 }
 
 /*Inicio dos Estilos da tela Inserir Alunos*/
@@ -62,7 +61,7 @@ h1 {
 }
 
 .mb-4 {
-    margin-top: -100px;
+    margin-top: -50px;
 }
 
 .form-label{
