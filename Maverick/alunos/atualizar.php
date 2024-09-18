@@ -107,64 +107,29 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                     </div>
 
                     <div class="col col-lg-2">
-                    <label for="foneAluno" class="form-label">Telefone</label>
-                    <input type="text" class="form-control" id="foneAluno" name="foneAluno"
+                        <label for="foneAluno" class="form-label">Telefone</label>
+                        <input type="text" class="form-control" id="foneAluno" name="foneAluno"
                         value="<?php echo htmlspecialchars($aluno['foneAluno']); ?>" required>
                     </div>
                     <div class="col col-lg-8">
-                    <label for="emailAluno" class="form-label">Email</label>
-                    <input type="text" class="form-control" id="emailAluno" name="emailAluno"
+                        <label for="emailAluno" class="form-label">Email</label>
+                        <input type="text" class="form-control" id="emailAluno" name="emailAluno"
                         value="<?php echo htmlspecialchars($aluno['emailAluno']); ?>" required>
                     </div>
                     <div class="col col-lg-2">
-                    <label for="statusAluno" class="form-label">Status</label>
-                    <select class="form-select" id="statusAluno" name="statusAluno" required>
-                        <option value="Cursando" <?php echo $aluno['statusAluno'] == 'Cursando' ? 'selected' : ''; ?>>
+                        <label for="statusAluno" class="form-label">Status</label>
+                        <select class="form-select" id="statusAluno" name="statusAluno" required>
+                            <option value="Cursando" <?php echo $aluno['statusAluno'] == 'Cursando' ? 'selected' :  ''; ?>>
                             Cursando
-                        </option>
-                        <option value="Concluido" <?php echo $aluno['statusAluno'] == 'Concluido' ? 'selected' : ''; ?>>
+                            </option>
+                            <option value="Concluido" <?php echo $aluno['statusAluno'] == 'Concluido' ? 'selected' : ''; ?>>
                             Concluído
-                        </option>
-                    </select>
+                            </option>
+                        </select>
                     </div>
-
-
-
                 </div>
             </div>
-
-            <div class="info-row">
-                <div class="info-col">
-                </div>
-                <div class="info-col">
-                </div>
-            </div>
-
-            <div class="info-row">
-                <div class="info-col">
-
-                </div>
-                <div class="info-col">
-
-                </div>
-                <div class="info-col">
-
-                </div>
-            </div>
-
-            <div class="info-row">
-                <div class="info-col">
-               
-                </div>
-                <div class="info-col">
-                    
-                </div>
-                <div class="info-col">
-                    
-                </div>
-            </div>
-    </div>
-    </form>
+        </form>
     </div>
     <button type="submit" class="btn btn-primary">Atualizar</button>
     <a href="DashAluno.php" class="btn btn-secondary">Voltar</a>
