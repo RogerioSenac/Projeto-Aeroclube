@@ -43,9 +43,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <div class="navbar_menu">
         <img src="..\Assets\images\aeronaves\logo.png" alt="Logo ">
     </div>
-    < class="container my-4">
+    <div class="container my-4">
         <h1 class="mb-4">Atualização de Registro do Aluno</h1>
-
         <div class="card-profile">
             <?php if (!empty($aluno['fotoAluno']) && file_exists('../Assets/images/' . basename($aluno['fotoAluno']))): ?>
             <img class="imgPerfil" src="../Assets/images/<?= htmlspecialchars(basename($aluno['fotoAluno'])); ?>"
@@ -54,7 +53,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             <img src="../Assets/images/default-avatar.png" alt="Foto do Aluno">
             <?php endif; ?>
         </div>
-
         <form method="POST" enctype="multipart/form-data">
             <div class="info-row">
                 <div class="info-col">
@@ -124,12 +122,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 </div>
             </div>
         </form>
-        </div>
-        <button type="submit" class="btn btn-primary">Atualizar</button>
-        <a href="DashAluno.php" class="btn btn-secondary">Voltar</a>
+    </div>
+    <button type="submit" class="btn btn-primary">Atualizar</button>
+    <a href="DashAluno.php" class="btn btn-secondary">Voltar</a>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-..." crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-..."
+        crossorigin="anonymous"></script>
 </body>
+
 
 </html>
