@@ -132,46 +132,64 @@ $aluno = $buscarAluno->fetch(PDO::FETCH_ASSOC);
             <img src="../Assets/images/default-avatar.png" alt="Foto do Aluno">
             <?php endif; ?>
         </div>
-        <div class="container text-center">
-            <div class="row justify-content-md-center">
-                <div class="col">
-                    <p><strong>ID:</strong> <?= htmlspecialchars($aluno['idAluno']); ?></p>
-                </div>
-                <div class="col-6">
-                    <p><strong>Nome:</strong> <?= htmlspecialchars($aluno['nomeAluno']); ?></p>
-                </div>
-                <div class="col">
-                    <p><strong>Data Nascimento: </strong><?= htmlspecialchars($aluno['dataNasc']); ?></p>
-                </div>
-                <div class="col col-lg-8">
-                    <p><strong>Endereço: </strong><?= htmlspecialchars($aluno['ruaAluno']) ?></p>
-                </div>
-                <div class="col col-lg-4">
-                    <p><strong>Bairro: </strong><?= htmlspecialchars($aluno['bairroAluno']) ?></p>
-                </div>
-                <div class="col col-lg-4">
-                    <p><strong>Cidade: </strong><?= htmlspecialchars($aluno['cityAluno']) ?></p>
-                </div>
-                <div class="col col-lg-4">
-                    <p><strong>Estado: </strong><?= htmlspecialchars($aluno['estadoAluno']) ?></p>
-                </div>
-                <div class="col col-lg-4">
-                    <p><strong>CEP: </strong><?= htmlspecialchars($aluno['cepAluno']) ?></p>
-                </div>
-                <div class="col col-lg-4">
-                    <p><strong>Fone: </strong><?= htmlspecialchars($aluno['foneAluno']) ?></p>
-                </div>
-                <div class="col col-lg-8">
-                    <p><strong>Email :</strong><?= htmlspecialchars($aluno['emailAluno']) ?></p>
-                </div>
-                <div class="col col-lg-6">
-                    <p><strong>Data Matricula:</strong> <?= htmlspecialchars($aluno['data_matricula']) ?></p>
-                </div>
-                <div class="col col-lg-6">
-                    <p><strong>Status:</strong> <?= htmlspecialchars($aluno['statusAluno']) ?></p>
+        <form method="POST" enctype="multipart/form-data">
+            <div class="container text-center">
+                <div class="row justify-content-md-center">
+                    <div class="col col-lg-10">
+                        <label for="nomeAluno" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="nomeAluno" name="nomeAluno"
+                            value="<?php echo htmlspecialchars($aluno['nomeAluno']); ?>" readonly>
+                    </div>
+                    <div class="col col-lg-2">
+                        <label for="dataNasc" class="form-label">Dt Nascimento</label>
+                        <input type="text" class="form-control" id="dataNasc" name="dataNasc"
+                            value="<?php echo htmlspecialchars($aluno['dataNasc']); ?>" readonly>
+                    </div>
+                    <div class="col col-lg-6">
+                        <label for="ruaAluno" class="form-label">Endereço</label>
+                        <input type="text" class="form-control" id="ruaAluno" name="ruaAluno"
+                            value="<?php echo htmlspecialchars($aluno['ruaAluno']); ?>" readonly>
+                    </div>
+                    <div class="col col-lg-6">
+                        <label for="bairroAluno" class="form-label">Bairro</label>
+                        <input type="text" class="form-control" id="bairroAluno" name="bairroAluno"
+                            value="<?php echo htmlspecialchars($aluno['bairroAluno']); ?>" readonly>
+                    </div>
+                    <div class="col col-lg-4">
+                        <label for="cityAluno" class="form-label">Cidade</label>
+                        <input type="text" class="form-control" id="cityAluno" name="cityAluno"
+                            value="<?php echo htmlspecialchars($aluno['cityAluno']); ?>" readonly>
+                    </div>
+                    <div class="col col-lg-4">
+                        <label for="estadoAluno" class="form-label">Estado</label>
+                        <input type="text" class="form-control" id="estadoAluno" name="estadoAluno"
+                            value="<?php echo htmlspecialchars($aluno['estadoAluno']); ?>" readonly>
+                    </div>
+                    <div class="col col-lg-4">
+                        <label for="cepAluno" class="form-label">CEP</label>
+                        <input type="text" class="form-control" id="cepAluno" name="cepAluno"
+                            value="<?php echo htmlspecialchars($aluno['cepAluno']); ?>" readonly>
+                    </div>
+
+                    <div class="col col-lg-2">
+                        <label for="foneAluno" class="form-label">Telefone</label>
+                        <input type="text" class="form-control" id="foneAluno" name="foneAluno"
+                            value="<?php echo htmlspecialchars($aluno['foneAluno']); ?>" readonly>
+                    </div>
+                    <div class="col col-lg-8">
+                        <label for="emailAluno" class="form-label">Email</label>
+                        <input type="text" class="form-control" id="emailAluno" name="emailAluno"
+                            value="<?php echo htmlspecialchars($aluno['emailAluno']); ?>" readonly>
+                    </div>
+                    <div class="col col-lg-2">
+                        <label for="statusAluno" class="form-label">Status</label>
+                        <select class="form-select" id="statusAluno" name="statusAluno" readonly>
+                    </div>
                 </div>
             </div>
-            <a href="DashAluno.php" class="btn btn-secondary">Voltar</a>
+        </form>
+    </div>
+    <a href="DashAluno.php" class="btn btn-secondary">Voltar</a>
 </body>
 
 </html>
