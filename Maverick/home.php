@@ -221,7 +221,7 @@ $mostra = $busca->fetchAll(PDO::FETCH_ASSOC);
                         <a class="nav-link" href="#contato">Contato</a>
                     </li>
                     <li class="nav-item login-item">
-                        <a class="nav-link btn btn-primary text-white" href="./login/logar.php">Login</a>
+                        <a class="nav-link btn btn-primary text-white" href="../senha/DashAcesso.php">Login</a>
                     </li>
                 </ul>
             </div>
