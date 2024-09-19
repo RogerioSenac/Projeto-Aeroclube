@@ -1,3 +1,12 @@
+<?php
+
+    include("conexao.php");
+
+    $busca = $conexao->query("SELECT * FROM formacoes_adicionais WHERE nomeFormacao ORDER BY ASC;");
+    $mostra = $busca->fetchAll(PDO::FETCH_ASSOC);
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -195,9 +204,7 @@
                             Cursos
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="cursosDropdown">
-                            <li><a class="dropdown-item" href="#curso1">Curso de Pilotagem Básica</a></li>
-                            <li><a class="dropdown-item" href="#curso2">Curso de Navegação Aérea</a></li>
-                            <li><a class="dropdown-item" href="#curso3">Curso de Manutenção de Aeronaves</a></li>
+                            <li><a class="dropdown-item" href="<?php echo htmlspecialchars($mostra["nomeFormacao"])?>"></a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
