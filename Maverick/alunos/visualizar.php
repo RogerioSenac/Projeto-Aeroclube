@@ -6,7 +6,6 @@ $id = $_GET['id'];
 $buscarAluno = $conexao->prepare("SELECT * FROM alunos WHERE idAluno=?");
 $buscarAluno->execute([$id]);
 $aluno = $buscarAluno->fetch(PDO::FETCH_ASSOC);
-
 ?>
 
 <!DOCTYPE html>
@@ -19,103 +18,6 @@ $aluno = $buscarAluno->fetch(PDO::FETCH_ASSOC);
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../Assets/css/estiloAtualizar.css">
     <title>ACADEMY MAVERICK - Consulta de dados do Registro de Alunos</title>
-    <!-- <style>
-        .card-profile {
-            text-align: center;
-            /* Centraliza o conteúdo dentro do card */
-            padding: 2rem;
-        }
-
-        .card-profile img {
-            max-width: 150px;
-            /* Limita a largura máxima da imagem */
-            max-height: 150px;
-            /* Limita a altura máxima da imagem */
-            border-radius: 50%;
-            /* Cria um efeito circular para a imagem */
-            object-fit: cover;
-            /* Mantém a proporção da imagem e preenche o card */
-            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
-            /* Sombra leve para a imagem */
-        }
-
-        .imgPerfil {
-            height: 150px;
-            width: 150px;
-        }
-
-        .card {
-            width: 850px;
-            /* Define a largura do card */
-            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
-            /* Adiciona sombra ao card */
-        }
-
-        .card-body {
-            padding-top: 0;
-            /* Remove o padding superior padrão do card */
-        }
-
-        .card-info {
-            margin-top: 1rem;
-            /* Adiciona espaçamento entre a imagem e as informações */
-        }
-
-        .info-row {
-            display: flex;
-            flex-wrap: wrap;
-            /* Permite que os itens se movam para a linha seguinte se não houver espaço */
-            justify-content: space-between;
-            /* Distribui o espaço entre os itens igualmente */
-        }
-
-        .info-col {
-            flex: 1;
-            /* Permite que as colunas ocupem o mesmo espaço */
-            min-width: 0px;
-            /* Define uma largura mínima para as colunas */
-            margin: 0.5rem 0;
-            /* Adiciona margem vertical entre as colunas */
-        }
-
-        .info-col p {
-            margin: 0;
-            /* Remove a margem dos parágrafos */
-        }
-
-        .info-col h4 {
-            margin: 0;
-            /* Remove a margem dos parágrafos */
-        }
-
-        .btn-secondary {
-            margin-left: 1000px;
-        }
-
-        .my-4 {
-            text-align: center;
-            text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.5);
-        }
-
-        .info-col-id {
-            width: 50px;
-            height: 30px;
-        }
-
-        .info-col-nome {
-            position: absolute;
-            margin-left: 60px;
-            height: 30px;
-
-        }
-
-        .info-col-idade {
-            position: absolute;
-            margin-left: 395px;
-            height: 30px;
-
-        }
-    </style> -->
 </head>
 
 <body>
@@ -184,18 +86,19 @@ $aluno = $buscarAluno->fetch(PDO::FETCH_ASSOC);
                     <div class="col col-lg-2">
                         <label for="statusAluno" class="form-label">Status</label>
                         <select class="form-select" id="statusAluno" name="statusAluno" readonly>
+                            <option value="ativo" <?php echo ($aluno['statusAluno'] == 'ativo') ? 'selected' : ''; ?>>Ativo</option>
+                            <option value="inativo" <?php echo ($aluno['statusAluno'] == 'inativo') ? 'selected' : ''; ?>>Inativo</option>
+                        </select>
                     </div>
                 </div>
             </div>
         </form>
-        <button>
+        <div class="text-center my-4">
             <a href="DashAluno.php" class="btn btn-secondary">Voltar</a>
-        </button>
+        </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-..."
-        crossorigin="anonymous"></script>
-        
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-..." crossorigin="anonymous"></script>
 </body>
 
 </html>
