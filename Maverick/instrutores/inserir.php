@@ -1,4 +1,5 @@
 <?php
+
 include("../conexao.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -13,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cep = $_POST['cepInstr'];
     $fone = $_POST['foneInstr'];
     $email = $_POST['emailInstr'];
-    $foto = $_POST['fotoInstr']; // Use $_FILES para o upload de arquivos
+    $foto = $_FILES['fotoInstr']; // Use $_FILES para o upload de arquivos
 
     // Diretório onde a imagem será salva
     $diretorioImagem = '../Assets/images/instrutor';
@@ -40,11 +41,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ':cepINstr' => $cep,
             ':foneInstr' => $fone,
             ':emailInstr' => $email,
-            ':fotoAluno' => $caminhoImagem
+            ':fotoInstr' => $caminhoImagem
         ]);
 
         // Redireciona para a página de cadastro com uma mensagem de sucesso
-        $idAluno = $conexao->lastInsertId();
+        $idInstr = $conexao->lastInsertId();
         header("Location: DashInstrutor.php?id=$idInstr&message=Instrutor cadastrado com sucesso!");
         exit();
     } else {
@@ -63,111 +64,70 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Assets/CSS/estiloAluno.css">
     <title>Academy Maverick - Novo Resgistro de Instrutor</title>
-    <style>
-        h1 {
-            text-align: center;
-            margin-bottom: 2rem;
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #343a40;
-            /* Cor escura para contraste */
-        }
-
-        .info-row {
-            display: flex;
-            flex-wrap: wrap;
-            /* Permite que os itens se movam para a linha seguinte se não houver espaço */
-            justify-content: space-between;
-            /* Distribui o espaço entre os itens igualmente */
-        }
-
-        .info-col {
-            flex: 1;
-            /* Permite que as colunas ocupem o mesmo espaço */
-            min-width: 0px;
-            /* Define uma largura mínima para as colunas */
-            margin: 0.5rem 0;
-            /* Adiciona margem vertical entre as colunas */
-            /* border: solid; */
-            margin: 3px;
-        }
-
-        .mb-4 {
-            margin-top: 180px;
-         
-        }
-    </style>
-
 </head>
 
 <body>
-    <div class="container">
+    <div class="navbar_menu">
+        <img src="..\Assets\images\aeronaves\logo.png" alt="Logo ">
+    </div>
+    <div class="container my-4">
         <h1 class="mb-4">Novo Registro de Instrutor</h1>
         <form method="POST" enctype="multipart/form-data">
-            <div class="info-row">
-                <div class="info-col">
+            <div class="row justify-content-md-center">
+                <div class="col col-lg-12">
                     <label form="nomeInstr" class="form-label">Nome</label>
                     <input type="text" class="form-control" id="nomeInstr" name="nomeInstr" required>
                 </div>
-                <div class="info-col">
+                <div class="col col-lg-4">
                     <label form="dataNascInstr" class="form-label">Data Nascimento</label>
                     <input type="text" class="form-control" id="dataNascInstr" name="dataNascInstr" required>
                 </div>
-            </div>
-            <div class="info-row">
-                <div class="info-col">
+                <div class="col col-lg-4">
                     <label form="matriculaInstr" class="form-label">Matricula</label>
                     <input type="text" class="form-control" id="matriculaInstr" name="matriculaInstr" required>
                 </div>
-                <div class="info-col">
+                <div class="col col-lg-4">
                     <label form="breveInstr" class="form-label">Breve</label>
                     <input type="text" class="form-control" id="breveInstr" name="breveInstr" required>
                 </div>
-            </div>
-            <div class="info-row">
-                <div class="info-col">
+                <div class="col col-lg-6">
                     <label form="endInstr" class="form-label">Rua/Av.</label>
                     <input type="text" class="form-control" id="endInstr" name="endInstr" required>
                 </div>
-                <div class="info-col">
+                <div class="col col-lg-6">
                     <label form="bairroInstr" class="form-label">Bairro</label>
                     <input type="text" class="form-control" id="bairroInstr" name="bairroInstr" required>
                 </div>
-            </div>
-            <div class="info-row">
-                <div class="info-col">
+                <div class="col col-lg-4">
                     <label form="cityInstr" class="form-label">Cidade</label>
                     <input type="text" class="form-control" id="cityInstr" name="cityInstr" required>
                 </div>
-                <div class="info-col">
+                <div class="col col-lg-4">
                     <label form="estadoInstr" class="form-label">Estado</label>
                     <input type="text" class="form-control" id="estadoInstr" name="estadoInstr" required>
                 </div>
-                <div class="info-col">
+                <div class="col col-lg-4">
                     <label form="cepInstr" class="form-label">Cep</label>
                     <input type="text" class="form-control" id="cepInstr" name="cepInstr" required>
                 </div>
-            </div>
-            <div class="info-row">
-                <div class="info-col">
+                <div class="col col-lg-6">
                     <label form="foneInstr" class="form-label">Fone</label>
                     <input type="text" class="form-control" id="foneInstr" name="foneInstr" required>
                 </div>
-                <div class="info-col">
-                    <label form="emailInstr" class="form-label">Fone</label>
+                <div class="col col-lg-6">
+                    <label form="emailInstr" class="form-label">Email</label>
                     <input type="text" class="form-control" id="emailInstr" name="emailInstr" required>
                 </div>
-            </div>
-
-            <div class="mb-3">
-                <label for="fotoInstr" class="form-label">Foto do Instrutor</label>
-                <input type="file" class="form-control" id="fotoInstr" name="fotoInstr" accept="image/*">
-            </div>
-
-            <div class="mb-3">
-                <button type="submit" class="btn btn-success">Gravar</button>
-                <a href="DashInstrutor.php" class="btn btn-secondary">Voltar</a>
+                <div class="col col-lg-12">
+                    <label for="fotoInstr" class="form-label">Foto do Instrutor</label>
+                    <input type="file" class="form-control" id="fotoInstr" name="fotoInstr" accept="image/*">
+                </div>
+                <div class="mb-4">
+                    <button type="submit" class="btn btn-success">Gravar</button>
+                    <a href="DashInstrutor.php" class="btn btn-secondary">Voltar</a>
+                </div>
             </div>
         </form>
     </div>
