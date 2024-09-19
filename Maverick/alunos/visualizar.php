@@ -134,13 +134,13 @@ $aluno = $buscarAluno->fetch(PDO::FETCH_ASSOC);
         </div>
         <div class="container text-center">
             <div class="row justify-content-md-center">
-                <div class="col">
+                <div class="col col-lg-2">
                     <p><strong>ID:</strong> <?= htmlspecialchars($aluno['idAluno']); ?></p>
                 </div>
-                <div class="col-6">
+                <div class="col col-lg-6">
                     <p><strong>Nome:</strong> <?= htmlspecialchars($aluno['nomeAluno']); ?></p>
                 </div>
-                <div class="col">
+                <div class="col col-lg-4">
                     <p><strong>Data Nascimento: </strong><?= htmlspecialchars($aluno['dataNasc']); ?></p>
                 </div>
                 <div class="col col-lg-8">
