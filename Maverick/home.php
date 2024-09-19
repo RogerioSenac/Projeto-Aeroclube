@@ -221,7 +221,7 @@ $mostra = $busca->fetchAll(PDO::FETCH_ASSOC);
                         <a class="nav-link" href="#contato">Contato</a>
                     </li>
                     <li class="nav-item login-item">
-                        <a class="nav-link btn btn-primary text-white" href="../senha/DashAcesso.php">Login</a>
+                        <a class="nav-link btn btn-primary text-white" href="./senha/DashAcesso.php">Login</a>
                     </li>
                 </ul>
             </div>
@@ -237,7 +237,7 @@ $mostra = $busca->fetchAll(PDO::FETCH_ASSOC);
                 <h1>Bem-vindo à Academia Maverick!!</h1>
                 <p class="lead"><b>Venha explorar os céus conosco! Oferecemos aulas de pilotagem, eventos e muito
                         mais!</b></p>
-                <a href="#" class="btn btn-dark btn-lg">Saiba Mais</a>
+                <!-- <a href="#" class="btn btn-dark btn-lg">Saiba Mais</a> -->
             </div>
         </div>
 
@@ -276,7 +276,7 @@ $mostra = $busca->fetchAll(PDO::FETCH_ASSOC);
                             <h5 class="card-title">Associe-se</h5>
                             <p class="card-text">Torne-se um membro do nosso aeroclube e aproveite benefícios exclusivos
                                 e descontos.</p>
-                            <a href="#" class="btn btn-primary">Ver Mais</a>
+                            <a href="./senha/DashAcesso.php" class="btn btn-primary">Acessar</a>
                         </div>
                     </div>
                 </div>
