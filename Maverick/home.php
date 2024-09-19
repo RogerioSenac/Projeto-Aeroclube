@@ -1,9 +1,9 @@
 <?php
 
-    include("conexao.php");
+include("conexao.php");
 
-    $busca = $conexao->query("SELECT * FROM formacoes_adicionais ORDER BY nomeFormacao ASC;");
-    $mostra = $busca->fetchAll(PDO::FETCH_ASSOC);
+$busca = $conexao->query("SELECT * FROM formacoes_adicionais ORDER BY nomeFormacao ASC;");
+$mostra = $busca->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
@@ -16,172 +16,172 @@
     <title>Academy Maverick - Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-    html,
-    body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
 
-    body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-    
-    }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
 
-    .container {
-        flex: 1;
-        padding: 20px;
-        height: 100%;
-    }
+        }
 
-    /* SEÇÃO BANNER ----------------------------- */
-    .container-fluid.text-white {
-        background-image: url("Assets/images/aeronaves/14bis.png");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        text-shadow: -5px 1px 5px rgba(0, 0, 0, 1);
-    }
+        .container {
+            flex: 1;
+            padding: 20px;
+            height: 100%;
+        }
 
-    .back {
-        background-color: rgba(0, 0, 0, 0.2);
-        background-size: cover;
-        padding: 30px;
-    }
+        /* SEÇÃO BANNER ----------------------------- */
+        .container-fluid.text-white {
+            background-image: url("Assets/images/aeronaves/14bis.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-shadow: -5px 1px 5px rgba(0, 0, 0, 1);
+        }
 
-    .lead {
-        text-shadow: -5px 1px 5px rgba(0, 0, 0, 1);
-    }
+        .back {
+            background-color: rgba(0, 0, 0, 0.2);
+            background-size: cover;
+            padding: 30px;
+        }
 
-    /* SEÇÃO DO MENU ----------------------------- */
-    .navbar {
-        z-index: 1000;
-    }
+        .lead {
+            text-shadow: -5px 1px 5px rgba(0, 0, 0, 1);
+        }
 
-    .navbar-nav {
-        display: flex;
-        justify-content: center;
-        flex: 1;
-    }
+        /* SEÇÃO DO MENU ----------------------------- */
+        .navbar {
+            z-index: 1000;
+        }
 
-    .navbar-nav .nav-item {
-        margin: 0 10px;
-    }
+        .navbar-nav {
+            display: flex;
+            justify-content: center;
+            flex: 1;
+        }
 
-    .navbar-nav .nav-link {
-        padding: 0.5rem 1rem;
-    }
+        .navbar-nav .nav-item {
+            margin: 0 10px;
+        }
 
-    .navbar-nav .login-item {
-        margin-left: auto;
-    }
+        .navbar-nav .nav-link {
+            padding: 0.5rem 1rem;
+        }
 
-    .dropdown-menu{
-        background-color: rgba(2, 80, 196, 0.7);
-    }
+        .navbar-nav .login-item {
+            margin-left: auto;
+        }
 
-    .dropdown-menu:hover{
-        background-color: ;
-    }
+        .dropdown-menu {
+            background-color: rgba(2, 80, 196, 0.7);
+        }
 
-    /* SEÇÃO DOS CARDS ----------------------------- */
-    .card {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        border-color: rgba(0, 0, 0, 0.3);
-    }
+        .dropdown-menu:hover {
+            background-color: ;
+        }
 
-    .card:hover {
-        box-shadow: 5px 3px 7px rgba(2, 80, 196, 0.3);
-    }
+        /* SEÇÃO DOS CARDS ----------------------------- */
+        .card {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border-color: rgba(0, 0, 0, 0.3);
+        }
 
-    .card-img-top {
-        height: 200px;
-        object-fit: cover;
-    }
+        .card:hover {
+            box-shadow: 5px 3px 7px rgba(2, 80, 196, 0.3);
+        }
 
-    .card-body {
-        flex: 1;
-    }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
 
-    /* SEÇÃO SOBRE ----------------------------- */
-    .sobre {
-        padding: 50px 20px;
-        max-width: 70%;
-        margin: 0 auto;
-        text-align: justify;
-        color: white;
-        text-shadow: -5px 1px 5px rgba(0, 0, 0, 0.3);
-    }
+        .card-body {
+            flex: 1;
+        }
 
-    .sobre img {
-        height: 30rem;
-        width: 20rem;
-        margin-right: 20px;
-    }
+        /* SEÇÃO SOBRE ----------------------------- */
+        .sobre {
+            padding: 50px 20px;
+            max-width: 70%;
+            margin: 0 auto;
+            text-align: justify;
+            color: white;
+            text-shadow: -5px 1px 5px rgba(0, 0, 0, 0.3);
+        }
 
-    .center {
-        background-image: url("https://images.unsplash.com/photo-1651524431708-3781ac9e3da9?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-        background-size: cover;
-        margin-top: 100px;
-        margin-bottom: 20px;
-    }
+        .sobre img {
+            height: 30rem;
+            width: 20rem;
+            margin-right: 20px;
+        }
 
-    .center h2 {
-        text-align: center;
-        margin-bottom: -80px;
-        margin-top: 50px;
-        color: white;
-        text-shadow: -5px 1px 5px rgba(0, 0, 0, 1);
-    }
+        .center {
+            background-image: url("https://images.unsplash.com/photo-1651524431708-3781ac9e3da9?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-size: cover;
+            margin-top: 100px;
+            margin-bottom: 20px;
+        }
 
-    /* SEÇÃO CONTATO ----------------------------- */
-    .contato {
-        background-image: url("https://images.unsplash.com/photo-1583133269464-b721db5345f4?q=80&w=1890&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 20px;
-        color: white;
-        text-shadow: -5px 1px 5px rgba(0, 0, 0, 1);
-    }
+        .center h2 {
+            text-align: center;
+            margin-bottom: -80px;
+            margin-top: 50px;
+            color: white;
+            text-shadow: -5px 1px 5px rgba(0, 0, 0, 1);
+        }
 
-    .contato form {
-        width: 100%;
-        max-width: 600px;
-    }
+        /* SEÇÃO CONTATO ----------------------------- */
+        .contato {
+            background-image: url("https://images.unsplash.com/photo-1583133269464-b721db5345f4?q=80&w=1890&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: white;
+            text-shadow: -5px 1px 5px rgba(0, 0, 0, 1);
+        }
 
-    .form-control {
-        background-color: rgba(255, 255, 255, 0.3);
-        border: none;
-        color: white;
-    }
+        .contato form {
+            width: 100%;
+            max-width: 600px;
+        }
 
-    .form-control:focus {
-        background-color: rgba(255, 255, 255, 0.5);
-        box-shadow: none;
-    }
+        .form-control {
+            background-color: rgba(255, 255, 255, 0.3);
+            border: none;
+            color: white;
+        }
 
-    .form-label {
-        color: white;
-    }
+        .form-control:focus {
+            background-color: rgba(255, 255, 255, 0.5);
+            box-shadow: none;
+        }
 
-    .contato-list {
-        list-style: none;
-        padding: 0;
-        color: white;
-        text-shadow: -5px 1px 5px rgba(0, 0, 0, 1);
-    }
+        .form-label {
+            color: white;
+        }
 
-    .contato-list li {
-        margin: 5px 0;
-    }
+        .contato-list {
+            list-style: none;
+            padding: 0;
+            color: white;
+            text-shadow: -5px 1px 5px rgba(0, 0, 0, 1);
+        }
+
+        .contato-list li {
+            margin: 5px 0;
+        }
     </style>
 </head>
 
@@ -205,11 +205,15 @@
                             Cursos
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="cursosDropdown">
-                            <td>
-                                <?php echo htmlspecialchars($mostra["nomeFormacao"]); ?>
-                            </td>
+                            <?php foreach ($mostra as $curso): ?>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="#"><?php echo htmlspecialchars($curso["nomeFormacao"]); ?></a>
+                                </li>
+                            <?php endforeach; ?>
                         </ul>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="#sobre">Sobre</a>
                     </li>
