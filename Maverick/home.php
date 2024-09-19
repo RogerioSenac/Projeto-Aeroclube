@@ -205,7 +205,9 @@
                             Cursos
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="cursosDropdown">
-                            <li><a class="dropdown-item" href="<?php echo htmlspecialchars($mostra["nomeFormacao"])?>"></a></li>
+                            <td>
+                                <?php echo htmlspecialchars($mostra["nomeFormacao"]); ?>
+                            </td>
                         </ul>
                     </li>
                     <li class="nav-item">
