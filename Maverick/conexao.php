@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$dbname = 'aeroclube';
+$dbname = 'aeroclub';
 $username = 'root';
 $password = '';
 
