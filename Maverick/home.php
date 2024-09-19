@@ -2,7 +2,7 @@
 
     include("conexao.php");
 
-    $busca = $conexao->query("SELECT * FROM formacoes_adicionais ORDER BY ASC;");
+    $busca = $conexao->query("SELECT * FROM formacoes_adicionais ORDER BY nomeFormacao ASC;");
     $mostra = $busca->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
