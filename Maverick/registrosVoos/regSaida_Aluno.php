@@ -13,6 +13,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $novoAluno->execute([$aluno]);
 
     header('Location: DashRegistro.php');
+    
+    
 }
 ?>
 
