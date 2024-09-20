@@ -54,26 +54,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="container my-4">
         <h1 class="mb-4 text-center">Controle de Registro de Saída de Voo</h1>
         <!-- Tabela de dados -->
-        <table class="table table-dark table-hover">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Foto</th>
-                    <th>Aluno</th>
-                    <th>Status</th>
-                    <th>Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($exibirAlunos as $aluno): ?>
+        <div class="card text-bg-secondary mb-3">
+
+            <table class="table table-dark table-hover">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Foto</th>
+                        <th>Aluno</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($exibirAlunos as $aluno): ?>
                     <tr>
                         <td><?php echo htmlspecialchars($aluno['idAluno']) ?></td>
                         <td>
                             <?php if (!empty($aluno['fotoAluno']) && file_exists('../Assets/images/' . basename($aluno['fotoAluno']))): ?>
-                                <img src="../Assets/images/<?= htmlspecialchars(basename($aluno['fotoAluno'])); ?>"
-                                    alt="Foto do Aluno" class="foto-aluno">
+                            <img src="../Assets/images/<?= htmlspecialchars(basename($aluno['fotoAluno'])); ?>"
+                                alt="Foto do Aluno" class="foto-aluno">
                             <?php else: ?>
-                                <span>N/A</span>
+                            <span>N/A</span>
                             <?php endif; ?>
                         </td>
                         <td><?php echo htmlspecialchars($aluno['nomeAluno']) ?></td>
@@ -83,34 +85,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 class="btn btn-info btn-sm">Registrar Saída</a>
                         </td>
                     </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
 
-        <!-- Controles de Navegação -->
-        <nav aria-label="Page navigation">
-            <ul class="pagination justify-content-center">
-                <li class="page-item">
+            <!-- Controles de Navegação -->
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item">
 
-                </li>
-                <li class="page-item <?= $paginaAtual <= 1 ? 'disabled' : '' ?>">
-                    <a class="page-link" href="?pagina=<?= $paginaAtual - 1 ?>" aria-label="Previous">
-                        <span aria-hidden="true">Anterior</span>
-                    </a>
-                </li>
-                <?php for ($i = 1; $i <= $totalPaginas; $i++): ?>
+                    </li>
+                    <li class="page-item <?= $paginaAtual <= 1 ? 'disabled' : '' ?>">
+                        <a class="page-link" href="?pagina=<?= $paginaAtual - 1 ?>" aria-label="Previous">
+                            <span aria-hidden="true">Anterior</span>
+                        </a>
+                    </li>
+                    <?php for ($i = 1; $i <= $totalPaginas; $i++): ?>
                     <li class="page-item <?= $i == $paginaAtual ? 'active' : '' ?>">
                         <a class="page-link" href="?pagina=<?= $i ?>"><?= $i ?></a>
                     </li>
-                <?php endfor; ?>
-                <li class="page-item <?= $paginaAtual >= $totalPaginas ? 'disabled' : '' ?>">
-                    <a class="page-link" href="?pagina=<?= $paginaAtual + 1 ?>" aria-label="Next">
-                        <span aria-hidden="true">Próximo</span>
-                    </a>
-                </li>
-                <a href="DashRegistro.php" class="btn btn-secondary">Voltar</a>
-            </ul>
-        </nav>
+                    <?php endfor; ?>
+                    <li class="page-item <?= $paginaAtual >= $totalPaginas ? 'disabled' : '' ?>">
+                        <a class="page-link" href="?pagina=<?= $paginaAtual + 1 ?>" aria-label="Next">
+                            <span aria-hidden="true">Próximo</span>
+                        </a>
+                    </li>
+                    <a href="DashRegistro.php" class="btn btn-secondary">Voltar</a>
+                </ul>
+            </nav>
+        </div>
     </div>
 </body>
 
