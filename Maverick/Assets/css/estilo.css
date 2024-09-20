@@ -89,7 +89,7 @@ h1 {
 .mensagem h1 {
     color: #fff;
     margin-top: -100px;
-    margin-left: 150px;
+    margin-left: auto;
 }
 
 .btn-danger {
