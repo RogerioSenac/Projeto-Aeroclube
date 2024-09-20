@@ -111,7 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <span aria-hidden="true">Próximo</span>
                     </a>
                 </li>
-                <a href="DashAluno.php" class="btn btn-secondary">Voltar</a>
+                <a href="Dashinstrutor.php" class="btn btn-secondary">Voltar</a>
             </ul>
         </nav>
     </div>
