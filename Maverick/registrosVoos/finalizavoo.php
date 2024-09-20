@@ -177,7 +177,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 <label for="parecer" class="form-label">Parecer</label>
                 <input type="text" class="form-control" id="parecer" name="parecer" required>
             </div>
-            <div class="mb-4">
+            <div class="">
                 <button type="submit" class="btn btn-primary">Atualizar</button>
                 <a href="lista_voo_abertos.php" class="btn btn-secondary">Voltar</a>
             </div>
