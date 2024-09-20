@@ -47,13 +47,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-
+    <div class="navbar_menu">
+        <img src="../Assets/images/aeronaves/logo.png" alt="Logo">
+    </div>
     <div class="container my-4">
-
-        <div class="navbar_menu">
-            <img src="../Assets/images/aeronaves/logo.png" alt="Logo">
-        </div>
-
         <h1 class="mb-4 text-center">Lista de Cadastro de Alunos</h1>
 
         <!-- Tabela de dados -->
@@ -64,7 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <th>Foto</th>
                     <th>Aluno</th>
                     <th>Status</th>
-                    <th>Ações</th>
+                    <th>Ação</th>
                 </tr>
             </thead>
             <tbody>
