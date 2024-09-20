@@ -4,7 +4,7 @@ include("../conexao.php");
 $id = $_GET['id'];
 
 $buscarRegistro = $conexao->prepare("
-    SELECT alunos.nomeAluno, registros_voos.dataSaida, registros_voos.horaSaida, registros_voos.dataRetorno, registros_voos.horaRetorno, pareceres.parecer
+    SELECT alunos.nomeAluno, registros_voos.dataSaida, registros_voos.horaSaida, registros_voos.dataRetorno, registros_voos.horaRetorno, registros_voos.tempoVoo, pareceres.parecer
     FROM pareceres
     INNER JOIN registros_voos ON registros_voos.idRegVoo = pareceres.idRegVoo
     INNER JOIN alunos ON alunos.idAluno = registros_voos.idAluno
@@ -51,6 +51,7 @@ $registros = $buscarRegistro->fetchAll(PDO::FETCH_ASSOC);
                     <tr>
                         <th>Data e Hora de Saída</th>
                         <th>Data e Hora de Retorno</th>
+                        <th>Registro Tempo de Voo</th>
                         <th>Parecer</th>
                     </tr>
                 </thead>
@@ -59,6 +60,7 @@ $registros = $buscarRegistro->fetchAll(PDO::FETCH_ASSOC);
                         <tr>
                             <td><?php echo htmlspecialchars($registro['dataSaida']) . ' ' . htmlspecialchars($registro['horaSaida']); ?></td>
                             <td><?php echo htmlspecialchars($registro['dataRetorno']) . ' ' . htmlspecialchars($registro['horaRetorno']); ?></td>
+                            <td><?php echo htmlspecialchars($registro['tempoVoo']); ?></td>
                             <td><?php echo htmlspecialchars($registro['parecer']); ?></td>
                         </tr>
                     <?php endforeach; ?>
