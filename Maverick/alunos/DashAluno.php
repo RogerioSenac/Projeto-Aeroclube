@@ -18,10 +18,10 @@ include("../conexao.php");
 </head>
 
 <body>
+    <div class="navbar_menu">
+        <img src="..\Assets\images\aeronaves\logo.png" alt="Logo ">
+    </div>
     <div class="container my-4">
-        <div class="navbar_menu">
-            <img src="..\Assets\images\aeronaves\logo.png" alt="Logo ">
-        </div>
         <div class="container my-4">
             <h1>Controle de Registro de Alunos</h1>
             <div class="row">

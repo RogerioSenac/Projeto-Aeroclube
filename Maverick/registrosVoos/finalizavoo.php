@@ -113,7 +113,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <!-- Exibir informações do voo em uma tabela -->
         <div class="card text-bg-secondary mb3">
 
-            <div class="card-body">
+            <div class="card-bodi">
                 <table class="table table-dark table-hover">
                     <thead>
                         <tr>
