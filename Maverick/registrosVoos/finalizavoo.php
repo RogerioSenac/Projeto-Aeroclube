@@ -145,7 +145,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <!-- Formulário para atualizar o registro -->
         <form method="POST">
        
-            <div class="mb-3">
+            <div class="mb-4">
                 <label for="usarHoraComputador" class="form-label">Escolha a hora de retorno</label>
                 <div class="input-radio">
                     <input type="radio" id="usarHoraComputadorSim" name="usarHoraComputador" value="sim"
