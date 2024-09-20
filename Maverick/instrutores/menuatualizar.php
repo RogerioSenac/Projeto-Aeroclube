@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <img src="../Assets/images/aeronaves/logo.png" alt="Logo">
         </div>
 
-        <h1 class="mb-4 text-center">Lista de Registro de INstrutores</h1>
+        <h1 class="mb-4 text-center">Lista de Registro de Instrutores</h1>
 
         <!-- Tabela de dados -->
         <table class="table table-dark table-hover">
@@ -111,7 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <span aria-hidden="true">Próximo</span>
                     </a>
                 </li>
-                <a href="DashAluno.php" class="btn btn-secondary">Voltar</a>
+                <a href="DashInstrutor.php" class="btn btn-secondary">Voltar</a>
             </ul>
         </nav>
     </div>
