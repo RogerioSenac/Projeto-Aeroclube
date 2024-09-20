@@ -20,7 +20,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
     // Sanitize e validar o ID do aluno (assumindo que seja um número)
     $idAluno = filter_var($_GET['id'], FILTER_VALIDATE_INT);
 
-    // Verificar se o ID é válido
+    // Verificar se o ID é válidado
     if ($idAluno !== false) {
         // Preparar e executar a consulta para obter os registros dos voos
         $buscaRsaidas = $conexao->prepare("SELECT registros_voos.idRegVoo, alunos.nomeAluno, alunos.fotoAluno, registros_voos.dataSaida, registros_voos.horaSaida FROM registros_voos
