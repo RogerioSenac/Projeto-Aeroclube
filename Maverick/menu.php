@@ -30,9 +30,9 @@ $usuario = $_SESSION['usuario'];
     </div>
     <div class="container my-4">
         <div class="row mb-3">
-            <div class="col-md-12">
+            <div class="mensagem col-md-12">
                 <div class="d-flex justify-content-between align-items-center">
-                    <span>Bem-vindo, <?php echo htmlspecialchars($usuario); ?>!</span>
+                    <h1><span>Bem-vindo, <?php echo htmlspecialchars($usuario); ?>!</span></h1>
                     <a href="logout.php" class="btn btn-danger">Logout</a>
                 </div>
             </div>

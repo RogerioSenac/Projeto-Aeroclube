@@ -20,6 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $status = $_POST['statusAluno'];
 
     $atualizar = $conexao->prepare("UPDATE alunos SET nomeAluno=?, dataNasc=?, ruaAluno=?, bairroAluno=?, cityAluno=?, estadoAluno=?, cepAluno=?, foneAluno=?, emailAluno=?, statusAluno=? WHERE idAluno=?");
+    
     $atualizar->execute([$aluno, $dtNasc, $rua, $bairro, $cidade, $estado, $cep, $fone, $email, $status, $id]);
 
     header('Location: DashAluno.php');
@@ -129,9 +130,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                     </div>
                 </div>
             </div>
+            <button type="submit" class="btn btn-primary">Atualizar</button>
+            <a href="DashAluno.php" class="btn btn-secondary">Voltar</a>
         </form>
-        <button type="submit" class="btn btn-primary">Atualizar</button>
-        <a href="DashAluno.php" class="btn btn-secondary">Voltar</a>
     
     </div>
 
