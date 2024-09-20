@@ -65,6 +65,8 @@ h1 {
 }
 
 .form-label{
+    margin-top: 10px;
+    font-weight: bold;
     color:#fff;
 }
 
@@ -136,4 +138,20 @@ h1 {
 .imgPerfil {
     height: 150px;
     width: 150px;
+}
+
+.card-header{
+    color: #fff;
+}
+
+.input-radio{
+    color: #fff;
+}
+
+.card-body{
+    background: none;
+    margin-top: -75px;
+    margin-bottom: -30px;
+    margin-left: -13px;
+    margin-right: -13px;
 }
