@@ -1,20 +1,5 @@
 <?php
 include("../conexao.php");
-//Buscar os registros 
-$buscarAluno = $conexao->query("SELECT * FROM alunos ORDER BY nomeAluno ASC");
-//Exibir os Registros
-$exibirAlunos = $buscarAluno->fetchAll(PDO::FETCH_ASSOC);
-
-// if ($_SERVER["REQUEST_METHOD"] == "POST") {
-//     $aluno = $_POST["nomeAluno"];
-
-//     $novoAluno = $conexao->prepare("INSERT INTO alunos (nomeAluno) VALUE (?)");
-
-//     $novoAluno->execute([$aluno]);
-
-//     header('Location: index.php');
-// }
-
 ?>
 
 <!DOCTYPE html>
@@ -25,50 +10,74 @@ $exibirAlunos = $buscarAluno->fetchAll(PDO::FETCH_ASSOC);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../Assets/CSS/estilo.css">
-    <title>Academy Maverick - Controle de Registros de Voos</title>
-    <style>
-        h1 {
-            text-align: center;
-            margin-bottom: 2rem;
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #343a40;
-            /* Cor escura para contraste */
-        }
-    </style>
+    <link rel="stylesheet" href="../Assets/CSS/estiloAluno.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Escola Aviação Maverick</title>
+
 </head>
 
 <body>
-    <div class="navbar_menu">
-        <img src="../Assets/images/aeronaves/logo.png" alt="Logo">
-    </div>
-    <div class="mensagem">
-        <h1 class="mensagem">Registro de Históricos de Pareceres de Voos dos Alunos</h1>
-    </div>
-    <div class="container">
-        <table class="table table-dark table-hover">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Aluno</th>
-                    <th>Acessos</th>
-                </tr>
-            </thead>
-            <?php foreach ($exibirAlunos as $aluno): ?>
-                <tr>
-                    <td><?php echo htmlspecialchars($aluno['idAluno']) ?></td>
-                    <td><?php echo htmlspecialchars($aluno['nomeAluno']) ?></td>
-                    <td>
-                        <!-- <a href="atualizar.php?id=<?php echo $aluno['idAluno']; ?>"
-                            class="btn btn-warning btn-sm">Editar</a> -->
-                        <a href="visualizar.php?id=<?php echo $aluno['idAluno']; ?>"
-                            class="btn btn-secondary btn-sm">Visualizar</a>
-                    </td>
-                </tr>
-            <?php endforeach; ?>
-        </table>
-        <a href="../menu.php" class="btn btn-secondary">Voltar</a>
+    <div class="container my-4">
+        <div class="navbar_menu">
+            <img src="..\Assets\images\aeronaves\logo.png" alt="Logo ">
+        </div>
+        <div class="container my-4">
+            <h1>Controle de Registro de Pareceres</h1>
+            <div class="row">
+                <!-- Card 1 -->
+                <!-- <div class="col-md-3 mb-3">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fa-xl fa-solid fa-pen"></i>
+                            <h5 class="card-title">Inclusão</h5>
+                            <p class="card-text">Incluir registro.</p>
+                            <a href="inserir.php" class="btn btn-primary">Acessar</a>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Card 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fa-xl fa-solid fa-person-booth"></i>
+                            <h5 class="card-title">Atualização</h5>
+                            <p class="card-text">Atualizar registro.</p>
+                            <a href="menuatualizar.php" class="btn btn-primary">Acessar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fa-xl fa-solid fa-street-view"></i>
+                            <h5 class="card-title">Consulta</h5>
+                            <p class="card-text">Consulta registros.</p>
+                            <a href="menuvisualizar.php" class="btn btn-primary">Acessar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <i class="fa-xl fa-sharp fa-solid fa-user-slash"></i>
+                            <h5 class="card-title">Cancelamentos</h5>
+                            <p class="card-text">Cancelar registro.</p>
+                            <a href="menuapagar.php" class="btn btn-danger">Acessar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="../menu.php" class="btn btn-secondary">Voltar</a>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-..." crossorigin="anonymous"></script>
     </div>
 </body>
 
