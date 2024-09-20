@@ -13,7 +13,7 @@ include("../conexao.php");
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Escola Aviação Maverick</title>
     <style>
-        .card {
+        /* .card {
             transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
         }
 
@@ -25,7 +25,7 @@ include("../conexao.php");
         .card-icon {
             font-size: 2rem;
             margin-bottom: 1rem;
-        }
+        } */
 
         h1 {
             text-align: center;
