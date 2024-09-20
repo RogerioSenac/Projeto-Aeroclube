@@ -37,8 +37,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ':cepAluno' => $cep,
             ':foneAluno' => $fone,
             ':emailAluno' => $email,
-            // ':statusAluno' => $status,
-            // ':data_matricula' => $data_matricula,
             ':fotoAluno' => $caminhoImagem
         ]);
 

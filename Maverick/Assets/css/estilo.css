@@ -45,7 +45,7 @@ h1 {
 }
 
 .card {     
-    width: 400px;
+    width: 350px;
     height: 180px;  
     position: relative;
     border: none;
@@ -87,4 +87,15 @@ h1 {
 .card-text {
     margin-top: 55px;
     font-size: 1.1rem;
+}
+
+.mensagem h1{
+    color: #fff;
+    margin-top: -100px;
+    margin-left: 150px;
+}
+
+.btn-danger{
+    margin-top: -100px;
+    margin-right: 50px;
 }

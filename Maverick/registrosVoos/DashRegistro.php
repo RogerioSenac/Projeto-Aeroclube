@@ -11,38 +11,17 @@ include("../conexao.php");
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../Assets/CSS/estiloAluno.css">
     <title>Escola Aviação Maverick</title>
-    <style>
-        .card {
-            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        .card-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 2rem;
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #343a40;
-            /* Cor escura para contraste */
-        }
-    </style>
 </head>
 
 <body>
+    <div class="navbar_menu">
+        <img src="..\Assets\images\aeronaves\logo.png" alt="Logo ">
+    </div>
     <div class="container my-4">
-        <h1>Bem-vindo à Academy Maverick - Top Gun</h1>
+        <h1>Controle de Registro de Planos de Voo</h1>
         <div class="row">
-
             <!-- Card 1 -->
             <div class="col-md-4 mb-4">
                 <div class="card text-center">

@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../Assets/CSS/estiloAluno.css">
-    <title>Academy Maverick - Novo Registro de Alunos</title>
+    <title>Academy Maverick - Lista de Cadastro de Alunos</title>
 </head>
 
 <body>
@@ -111,7 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <span aria-hidden="true">Próximo</span>
                     </a>
                 </li>
-                <a href="DashAluno.php" class="btn btn-secondary">Voltar</a>
+                <a href="DashInstrutor.php" class="btn btn-secondary">Voltar</a>
             </ul>
         </nav>
     </div>
