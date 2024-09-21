@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../Assets/CSS/estiloAluno.css">
+    <link rel="stylesheet" href="../Assets/CSS/estilo.css">
     <title>Academy Maverick - Lista de Cadastro de Alunos</title>
 </head>
 
@@ -50,11 +50,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="navbar_menu">
         <img src="../Assets/images/aeronaves/logo.png" alt="Logo">
     </div>
+    <div class="etiqueta">
+        <h1>Controle de Registro de Saída de Voo</h1>
+    </div>
 
     <div class="container my-4">
-        <h1 class="mb-4 text-center">Controle de Registro de Saída de Voo</h1>
         <!-- Tabela de dados -->
-        <div class="card text-bg-secondary mb-3">
+      
 
             <table class="table table-dark table-hover">
                 <thead>
@@ -113,7 +115,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <a href="DashRegistro.php" class="btn btn-secondary">Voltar</a>
                 </ul>
             </nav>
-        </div>
+       
     </div>
 </body>
 

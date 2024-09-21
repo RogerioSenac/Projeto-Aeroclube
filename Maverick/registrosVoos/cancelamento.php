@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../Assets/CSS/estiloAluno.css">
+    <link rel="stylesheet" href="../Assets/CSS/estilo.css">
     <title>Academy Maverick - Controle de Registros de Voo</title>
 </head>
 
@@ -50,44 +50,48 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="navbar_menu">
         <img src="../Assets/images/aeronaves/logo.png" alt="Logo">
     </div>
-    <div class="container my-4">
+
+    <div class="etiqueta">
         <h1 class="mb-4">Registro de Alunos</h1>
+    </div>
+
+    <div class="container my-4">
 
         <!-- Tabela de registros de alunos -->
-        <div>
-            <table class="table table-dark table-hover">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Foto</th>
-                        <th>Aluno</th>
-                        <th>Ação</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <?php foreach ($exibirAlunos as $aluno): ?>
-                        <tr>
-                            <td><?php echo htmlspecialchars($aluno['idAluno']) ?></td>
-                            <td>
-                                <?php if (!empty($aluno['fotoAluno']) && file_exists('../Assets/images/' . basename($aluno['fotoAluno']))): ?>
-                                    <img src="../Assets/images/<?= htmlspecialchars(basename($aluno['fotoAluno'])); ?>"
-                                        alt="Foto do Aluno" class="foto-aluno">
-                                <?php else: ?>
-                                    <span>N/A</span>
-                                <?php endif; ?>
-                            </td>
-                            <td><?php echo htmlspecialchars($aluno['nomeAluno']) ?></td>
-                            <td>
-                                <a href="apagar.php?id=<?php echo $aluno['idAluno']; ?>" class="btn btn-danger btn-sm"
-                                    onclick="return confirm('Tem certeza que deseja deletar este registro?')">Excluir</a>
 
-                            </td>
-                        </tr>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
-        </div>
-        <div class="text-center my-4">
+        <table class="table table-dark table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Foto</th>
+                    <th>Aluno</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($exibirAlunos as $aluno): ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($aluno['idAluno']) ?></td>
+                        <td>
+                            <?php if (!empty($aluno['fotoAluno']) && file_exists('../Assets/images/' . basename($aluno['fotoAluno']))): ?>
+                                <img src="../Assets/images/<?= htmlspecialchars(basename($aluno['fotoAluno'])); ?>"
+                                    alt="Foto do Aluno" class="foto-aluno">
+                            <?php else: ?>
+                                <span>N/A</span>
+                            <?php endif; ?>
+                        </td>
+                        <td><?php echo htmlspecialchars($aluno['nomeAluno']) ?></td>
+                        <td>
+                            <a href="apagar.php?id=<?php echo $aluno['idAluno']; ?>" class="btn btn-danger btn-sm"
+                                onclick="return confirm('Tem certeza que deseja deletar este registro?')">Excluir</a>
+
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+
+        <div class="mb-4">
             <a href="DashRegistro.php" class="btn btn-secondary">Voltar</a>
         </div>
     </div>

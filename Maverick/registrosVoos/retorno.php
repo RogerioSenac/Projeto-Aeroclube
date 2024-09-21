@@ -50,7 +50,7 @@ WHERE registros_voos.idAluno=?");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../Assets/CSS/estiloAluno.css">
+    <link rel="stylesheet" href="../Assets/CSS/estilo.css">
     <title>Lista de Voos Abertos</title>
 </head>
 
@@ -58,10 +58,10 @@ WHERE registros_voos.idAluno=?");
     <div class="navbar_menu">
         <img src="../Assets/images/aeronaves/logo.png" alt="Logo">
     </div>
+    <div class="etiqueta">
+        <h1>Lista de voos em abertos do aluno</h1>
+    </div>
     <div class="container my-4">
-        <h1 class="my-4">Lista de voos em abertos do aluno</h1>
-        <div class="card text-bg-secondary mb-3">
-            <div class="card-body">
                 <table class="table table-dark table-hover">
                     <thead>
                         <tr>
@@ -75,30 +75,30 @@ WHERE registros_voos.idAluno=?");
                     </thead>
                     <tbody>
                         <?php foreach ($exibirRsaidas as $saidas): ?>
-                        <tr>
-                            <td><?php echo htmlspecialchars($saidas['idRegVoo']) ?></td>
-                            <td>
-                                <?php if (!empty($saidas['fotoAluno']) && file_exists('../Assets/images/' . basename($saidas['fotoAluno']))): ?>
-                                <img src="../Assets/images/<?= htmlspecialchars(basename($saidas['fotoAluno'])); ?>"
-                                     alt="Foto do Aluno" class="foto-aluno">
-                                <?php else: ?>
-                                <span>N/A</span>
-                                <?php endif; ?>
-                            </td>
-                            <td><?php echo htmlspecialchars($saidas['nomeAluno']); ?></td>
-                            <td><?php echo htmlspecialchars($saidas['dataSaida']) ?></td>
-                            <td><?php echo htmlspecialchars($saidas['horaSaida']) ?></td>
-                            <td>
-                                <a href="finalizavoo.php?id=<?php echo $saidas['idRegVoo']; ?>"
-                                   class="btn btn-warning btn-sm">Finalizar</a>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td><?php echo htmlspecialchars($saidas['idRegVoo']) ?></td>
+                                <td>
+                                    <?php if (!empty($saidas['fotoAluno']) && file_exists('../Assets/images/' . basename($saidas['fotoAluno']))): ?>
+                                        <img src="../Assets/images/<?= htmlspecialchars(basename($saidas['fotoAluno'])); ?>"
+                                            alt="Foto do Aluno" class="foto-aluno">
+                                    <?php else: ?>
+                                        <span>N/A</span>
+                                    <?php endif; ?>
+                                </td>
+                                <td><?php echo htmlspecialchars($saidas['nomeAluno']); ?></td>
+                                <td><?php echo htmlspecialchars($saidas['dataSaida']) ?></td>
+                                <td><?php echo htmlspecialchars($saidas['horaSaida']) ?></td>
+                                <td>
+                                    <a href="finalizavoo.php?id=<?php echo $saidas['idRegVoo']; ?>"
+                                        class="btn btn-warning btn-sm">Finalizar</a>
+                                </td>
+                            </tr>
                         <?php endforeach; ?>
                     </tbody>
                 </table>
-                <a href="lista_voo_abertos.php" class="btn btn-secondary">Voltar</a>
-            </div>
-        </div>
+                <Div class="mb-4">
+                    <a href="lista_voo_abertos.php" class="btn btn-secondary">Voltar</a>
+                </Div>
     </div>
 </body>
 
