@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="navbar_menu">
         <img src="../Assets/images/aeronaves/logo.png" alt="Logo">
     </div>
-    <div class="mensagem">
+    <div class="etiqueta">
         <h1>Cancelamento de Formação Adicional</h1>
     </div>
     <div class="container">
@@ -58,7 +58,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </tr>
             <?php endforeach; ?>
         </table>
-        <a href="DashFormacao.php" class="btn btn-secondary">Voltar</a>
+
+        <div class="mb-4">
+            <a href="DashFormacao.php" class="btn btn-secondary">Voltar</a>
+        </div>
     </div>
 </body>
 

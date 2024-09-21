@@ -205,6 +205,25 @@ span.alerta {
     font-weight: bold;
 }
 
+/* estilo Formações Adicionais - atualizar*/
+
+.input-label-wrapper {
+    display: flex;
+    align-items: center;
+    /* Alinha verticalmente */
+    gap: 10px; 
+    /* Espaçamento entre o input e a label */
+ }
+ 
+.input-custom-width {
+    width: auto;
+    /* Define a largura do input como 20 pixels */
+} 
+
+.form-label {
+    margin: 0;
+    /* Remove margens adicionais se necessário */
+}
 
 
 /* 
