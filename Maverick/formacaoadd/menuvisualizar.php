@@ -50,14 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <tr>
                     <td><?php echo htmlspecialchars($formacao['idFormAdd']) ?></td>
                     <td><?php echo htmlspecialchars($formacao['nomeFormacao']) ?></td>
-                    <!-- <td>
-                        <a href="visualizar.php?id=<?php echo $formacao['idFormAdd']; ?>"
-                            class="btn btn-info btn-sm">Visualizar</a>
-                        <a href="atualizar.php?id=<?php echo $formacao['idFormAdd']; ?>"
-                            class="btn btn-warning btn-sm">Editar</a>
-                        <a href="apagar.php?id=<?php echo $formacao['idFormAdd']; ?>" class="btn btn-danger btn-sm"
-                            onclick="return confirm('Tem certeza que deseja deletar este registro ?')">Excluir</a>
-                    </td> -->
+                  
                 </tr>
             <?php endforeach; ?>
         </table>
