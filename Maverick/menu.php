@@ -1,14 +1,14 @@
-<?php 
+<?php
 include('conexao.php');
 session_start(); // Inicia a sessão para usar variáveis de sessão
 
 // Verifica se o usuário está logado
-if (isset($_SESSION['usuario'])) {
-    header('Location: ../senha/DashAcesso.php'); // Redireciona para a página de login se não estiver logado
-    exit();
-}
+// if (!isset($_SESSION['usuario'])) {
+//     header('Location: senha/DashAcesso.php'); // Redireciona para a página de login se não estiver logado
+//     exit();
+// }
 
-$usuario = $_SESSION['usuario'];
+$usuario = $_SESSION['usuario']; // Atribui o valor do usuário logado à variável $usuario
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +32,7 @@ $usuario = $_SESSION['usuario'];
         <div class="row mb-3">
             <div class="mensagem col-md-12">
                 <div class="d-flex justify-content-between align-items-center">
-                    <h1><span>Bem-vindo, <?php echo htmlspecialchars($usuario); ?>!</span></h1>
+                    <h1><span>Bem-vindo, <?php echo htmlspecialchars($usuario); ?>!</span></h1> <!-- Exibe o nome do usuário -->
                     <a href="logout.php" class="btn btn-danger">Logout</a>
                 </div>
             </div>
