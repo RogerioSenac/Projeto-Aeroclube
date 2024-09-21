@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../Assets/CSS/estiloAluno.css">
+    <link rel="stylesheet" href="../Assets/CSS/estilo.css">
     <title>ACADEMY MAVERICK - Controle de Registro de Planos de Voo</title>
 </head>
 
@@ -33,9 +33,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="navbar_menu">
         <img src="../Assets/images/aeronaves/logo.png" alt="Logo">
     </div>
-
+    <div class="etiqueta">
+        <h1>Controle de Novo Registro de Voo</h1>
+    </div>
     <div class="container my-4">
-        <h1 class="mb-4">Controle de Novo Registro de Voo</h1>
         <form method="POST">
             <div class="form-label mb-3">
                 <p><strong>ID Aluno: </strong><?php echo htmlspecialchars($_GET['id']); ?></p>
@@ -54,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <?php endwhile; ?>
                 </select>
             </div>
-            <div class="mb-3">
+            <div class="mb-4">
                 <button type="submit" class="btn btn-success">Gravar</button>
                 <a href="regSaida_Aluno.php" class="btn btn-secondary">Voltar</a>
             </div>

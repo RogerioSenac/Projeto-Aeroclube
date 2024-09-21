@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $parecer = $_POST['parecer'];
     $usarHoraComputador = isset($_POST['usarHoraComputador']) ? $_POST['usarHoraComputador'] : 'nao';
     $usarDataComputador = isset($_POST['usarDataComputador']) ? $_POST['usarDataComputador'] : 'nao';
-    
+
     if ($usarHoraComputador === 'sim') {
         $dataRetorno = date('Y-m-d');
         $horaRetorno = date('H:i:s');
@@ -53,52 +53,52 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../Assets/CSS/estiloAluno.css">
+    <link rel="stylesheet" href="../Assets/CSS/estilo.css">
     <title>Atualização de Voo</title>
 
     <script>
-    function calcularTempoVoo() {
-        const dataSaida = document.getElementById('dataSaida').value;
-        const horaSaida = document.getElementById('horaSaida').value;
-        const dataRetorno = document.getElementById('dataRetorno').value;
-        const horaRetorno = document.getElementById('horaRetorno').value;
+        function calcularTempoVoo() {
+            const dataSaida = document.getElementById('dataSaida').value;
+            const horaSaida = document.getElementById('horaSaida').value;
+            const dataRetorno = document.getElementById('dataRetorno').value;
+            const horaRetorno = document.getElementById('horaRetorno').value;
 
-        if (dataSaida && horaSaida && dataRetorno && horaRetorno) {
-            // Converter as datas e horas para Date objects
-            const dataHoraSaida = new Date(`${dataSaida}T${horaSaida}`);
-            const dataHoraRetorno = new Date(`${dataRetorno}T${horaRetorno}`);
+            if (dataSaida && horaSaida && dataRetorno && horaRetorno) {
+                // Converter as datas e horas para Date objects
+                const dataHoraSaida = new Date(`${dataSaida}T${horaSaida}`);
+                const dataHoraRetorno = new Date(`${dataRetorno}T${horaRetorno}`);
 
-            // Calcular a diferença em milissegundos
-            let diferencaMillis = dataHoraRetorno - dataHoraSaida;
+                // Calcular a diferença em milissegundos
+                let diferencaMillis = dataHoraRetorno - dataHoraSaida;
 
-            // Verificar se a diferença é negativa (indica retorno no dia seguinte)
-            if (diferencaMillis < 0) {
-                dataHoraRetorno.setDate(dataHoraRetorno.getDate() + 1);
-                diferencaMillis = dataHoraRetorno - dataHoraSaida;
+                // Verificar se a diferença é negativa (indica retorno no dia seguinte)
+                if (diferencaMillis < 0) {
+                    dataHoraRetorno.setDate(dataHoraRetorno.getDate() + 1);
+                    diferencaMillis = dataHoraRetorno - dataHoraSaida;
+                }
+
+                // Converter a diferença para horas, minutos e segundos
+                const horas = Math.floor(diferencaMillis / (1000 * 60 * 60));
+                const minutos = Math.floor((diferencaMillis % (1000 * 60 * 60)) / (1000 * 60));
+                const segundos = Math.floor((diferencaMillis % (1000 * 60)) / 1000);
+
+                // Exibir o tempo de voo no campo correspondente no formato 'HH:mm:ss'
+                document.getElementById('tempoVoo').value =
+                    `${String(horas).padStart(2, '0')}:${String(minutos).padStart(2, '0')}:${String(segundos).padStart(2, '0')}`;
             }
-
-            // Converter a diferença para horas, minutos e segundos
-            const horas = Math.floor(diferencaMillis / (1000 * 60 * 60));
-            const minutos = Math.floor((diferencaMillis % (1000 * 60 * 60)) / (1000 * 60));
-            const segundos = Math.floor((diferencaMillis % (1000 * 60)) / 1000);
-
-            // Exibir o tempo de voo no campo correspondente no formato 'HH:mm:ss'
-            document.getElementById('tempoVoo').value =
-                `${String(horas).padStart(2, '0')}:${String(minutos).padStart(2, '0')}:${String(segundos).padStart(2, '0')}`;
         }
-    }
 
-    function definirHoraAtual() {
-        const dataAtual = new Date();
-        const dataFormatada = dataAtual.toISOString().split('T')[0];
-        const horaFormatada = dataAtual.toTimeString().substring(0, 5);
+        function definirHoraAtual() {
+            const dataAtual = new Date();
+            const dataFormatada = dataAtual.toISOString().split('T')[0];
+            const horaFormatada = dataAtual.toTimeString().substring(0, 5);
 
-        document.getElementById('dataRetorno').value = dataFormatada;
-        document.getElementById('horaRetorno').value = horaFormatada;
+            document.getElementById('dataRetorno').value = dataFormatada;
+            document.getElementById('horaRetorno').value = horaFormatada;
 
-        // Atualizar o tempo de voo se os campos já estiverem preenchidos
-        calcularTempoVoo();
-    }
+            // Atualizar o tempo de voo se os campos já estiverem preenchidos
+            calcularTempoVoo();
+        }
     </script>
 </head>
 
@@ -107,44 +107,41 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         <img src="../Assets/images/aeronaves/logo.png" alt="Logo">
     </div>
 
+    <div class="etiqueta">
+        <h1>Fechamento de Registro de Voo</h1>
+    </div>
+
     <div class="container">
-        <h1 class="mb-4">Fechamento de Registro de Voo</h1>
-
         <!-- Exibir informações do voo em uma tabela -->
-        <div class="card text-bg-secondary mb3">
+        <table class="table table-dark table-hover">
+            <thead>
+                <tr>
+                    <th>ID Voo</th>
+                    <th>Data Saída</th>
+                    <th>Hora Saída</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($exibir as $saidas): ?>
 
-            <div class="card-bodi">
-                <table class="table table-dark table-hover">
-                    <thead>
-                        <tr>
-                            <th>ID Voo</th>
-                            <th>Data Saída</th>
-                            <th>Hora Saída</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach ($exibir as $saidas): ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($saidas['idRegVoo']); ?>
+                        <td>
 
-                        <tr>
-                            <td><?php echo htmlspecialchars($saidas['idRegVoo']); ?>
-                            <td>
-
-                                <?php echo htmlspecialchars($saidas['dataSaida']); ?>
-                            </td>
-                            <td>
-                                <?php echo htmlspecialchars($saidas['horaSaida']); ?>
-                            </td>
-                        </tr>
+                            <?php echo htmlspecialchars($saidas['dataSaida']); ?>
+                        </td>
+                        <td>
+                            <?php echo htmlspecialchars($saidas['horaSaida']); ?>
+                        </td>
+                    </tr>
 
 
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
         <!-- Formulário para atualizar o registro -->
         <form method="POST">
-       
+
             <div class="mb-4">
                 <label for="usarHoraComputador" class="form-label">Escolha a hora de retorno</label>
                 <div class="input-radio">
