@@ -25,17 +25,16 @@ $registros = $buscarRegistro->fetchAll(PDO::FETCH_ASSOC);
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../Assets/CSS/estilo.css">
     <title>Consulta Históricos dos Pareceres de Voo do Aluno</title>
- </head>
+</head>
 
 <body>
     <div class="navbar_menu">
         <img src="../Assets/images/aeronaves/logo.png" alt="Logo">
     </div>
-    <div class="mensagem">
+    <div class="etiqueta">
         <h1>Consulta Histórico dos Pareceres de Voo do Aluno</h1>
     </div>
     <div class="container">
-
         <?php if (count($registros) > 0): ?>
             <p class="nome-aluno">Nome do Aluno: <?php echo htmlspecialchars($registros[0]['nomeAluno']); ?></p>
 
@@ -62,8 +61,10 @@ $registros = $buscarRegistro->fetchAll(PDO::FETCH_ASSOC);
         <?php else: ?>
             <p>Nenhum registro encontrado para o aluno.</p>
         <?php endif; ?>
-
-        <a href="menuvisualizar.php" class="btn btn-secondary">Voltar</a>
+        
+        <div class="mb-4">
+            <a href="menuvisualizar.php" class="btn btn-secondary">Voltar</a>
+        </div>
     </div>
 </body>
 
