@@ -4,6 +4,7 @@ body {
 
 .card {
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    align-items: center;
 }
 
 .card:hover {
@@ -12,7 +13,8 @@ body {
 }
 
 .card-icon {
-    font-size: 2rem; /* Ajuste o tamanho do ícone */
+    font-size: 2rem;
+    /* Ajuste o tamanho do ícone */
     margin-bottom: 1rem;
 }
 
@@ -34,7 +36,8 @@ h1 {
 .card-img-top {
     width: 50%;
     height: 50%;
-    object-fit: cover;
+    object-fit:cover;
+ 
 }
 
 .card {
@@ -58,14 +61,13 @@ h1 {
     position: absolute;
     /* background: rgba(123, 171, 201, 0.20); */
     text-align: center;
-
+    align-items: center;
 }
 
 .card-title {
     font-size: 1.5rem;
     font-weight: bold;
 }
-
 
 .card-text {
     margin-top: 55px;
@@ -75,13 +77,13 @@ h1 {
 .mensagem h1 {
     color: #fff;
     margin-top: -100px;
-    margin-left: center;
+    margin-left: 150px;
 }
 
-.form-label{
+.form-label {
     margin-top: 10px;
     font-weight: bold;
-    color:#fff;
+    color: #fff;
 }
 
 .btn-danger {
@@ -89,7 +91,7 @@ h1 {
     margin-right: 50px;
 }
 
-.btn-secondary{
+.btn-secondary {
     margin-left: 10px;
 }
 
@@ -97,7 +99,7 @@ h1 {
     margin-top: -55px;
 }
 
-.container{
+.container {
     margin-top: 90px;
 }
 
@@ -105,7 +107,7 @@ h1 {
     font-size: 1.75rem;
     font-weight: bold;
     color: #fff;
-    
+
 }
 
 /*Inicio estilos menu Aluno*/
@@ -208,8 +210,8 @@ h1 {
 
 .form-control,
 .form-select {
-    border: auto; 
-    box-shadow: auto; 
+    border: auto;
+    box-shadow: auto;
     border-bottom: 1px solid #ced4da;
     /* Apenas uma linha na parte inferior */
     border-radius: 2;
@@ -221,7 +223,7 @@ h1 {
     box-shadow: none;
     border-color: #80bdff;
     /* Cor de destaque ao focar */
-     outline: 0;
+    outline: 0;
 }
 
 /* .btn-primary {
@@ -229,7 +231,7 @@ h1 {
     margin-top: 20px;
 } */
 
-.tr td{
+.tr td {
     color: #fff;
     background-color: #fff;
 }
@@ -237,7 +239,7 @@ h1 {
 
 /*Inicio dos Estilos da tela Alerta Senha*/
 
-span.alerta{
+span.alerta {
     color: rgb(119, 5, 5);
     font-weight: bold;
 }

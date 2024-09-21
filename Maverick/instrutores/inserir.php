@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $foto = $_FILES['fotoInstr']; // Use $_FILES para o upload de arquivos
 
     // Diretório onde a imagem será salva
-    $diretorioImagem = '../Assets/images/instrutor';
+    $diretorioImagem = '../Assets/images/instrutores';
     $nomeImagem = basename($foto['name']);
     $caminhoImagem = $diretorioImagem . $nomeImagem;
 
@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Preparar e executar a consulta SQL para inserir os dados
         $stmt = $conexao->prepare("
         INSERT INTO intrutores (nomeInstr, dataNascInstr, matriculaInstr, breveInstr, endInstr, bairroInstr, cityInstr, estadoInstr, cepInstr, foneInstr, emaiInstr, fotoInstr) 
-        VALUES (:nomeinstr,:dataNascInstr,:matriculaInstr,:breveInstr,:endInstr,:bairroInstr,:cityInstr,:estadoInstr,:cepInstr,:foneInstr,:emailInstr,:fotoinstr)");
+        VALUES (:nomeinstr,:dataNascInstr,:matriculaInstr,:breveInstr,:endInstr,:bairroInstr,:cityInstr,:estadoInstr,:cepInstr,:foneInstr,:emailInstr,:fotoInstr)");
 
         // Certifique-se de definir as variáveis $dtNasc e $estadoAluno
         $stmt->execute([
@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../Assets/CSS/estiloAluno.css">
+    <link rel="stylesheet" href="../Assets/CSS/estilo.css">
     <title>Academy Maverick - Novo Resgistro de Instrutor</title>
 </head>
 
