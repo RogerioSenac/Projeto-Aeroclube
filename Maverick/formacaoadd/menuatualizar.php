@@ -24,28 +24,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Academy Maverick - Tipos de Formações</title>
-    <style>
-        h1 {
-            text-align: center;
-            margin-bottom: 2rem;
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #343a40;
-            /* Cor escura para contraste */
-        }
-    </style>
+    <link rel="stylesheet" href="../Assets/CSS/estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Escola Aviação Maverick</title>
 </head>
 
 <body>
+    <div class="navbar_menu">
+        <img src="../Assets/images/aeronaves/logo.png" alt="Logo">
+    </div>
+    <div class="mensagem">
+        <h1>Controle de Formações de Voos</h1>
+    </div>
     <div class="container">
-        <h1 class="my-4">Controle de Formações de Voos</h1>
+
         <!--Tabela de dados-->
-        <table class="table table-sucess table-striped">
+        <table class="table table-dark table-striped">
             <thead>
                 <tr>
                     <th>ID</th>
                     <th>Formação</th>
+                    <th>Ação</th>
                 </tr>
             </thead>
             <?php foreach ($exibirFormacao as $formacao): ?>

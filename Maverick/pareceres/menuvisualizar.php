@@ -117,7 +117,7 @@ $exibirAlunos = $buscarAlunos->fetchAll(PDO::FETCH_ASSOC);
                 </li>
             </ul>
             <div class="botao">
-                <a href="Dashparecer.php" class="btn btn-secondary">Voltar</a>
+                <a href="../menu.php" class="btn btn-secondary">Voltar</a>
             </div>
         </nav>
 

@@ -77,7 +77,7 @@ $usuario = $_SESSION['usuario'];
                     <img class="card-img-top" src="Assets/images/aeronaves/aviao1.jpg">
                     <div class="card-body">
                         <h1 class="card-text">Controle dos Pareceres de Voos.</h1>
-                        <a href="pareceres/DashParecer.php" class="btn btn-primary">Acessar</a>
+                        <a href="pareceres/menuvisualizar.php" class="btn btn-primary">Acessar</a>
                     </div>
                 </div>
             </div>
