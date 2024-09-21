@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $status = $_POST['statusAluno'];
 
     $atualizar = $conexao->prepare("UPDATE alunos SET nomeAluno=?, dataNasc=?, ruaAluno=?, bairroAluno=?, cityAluno=?, estadoAluno=?, cepAluno=?, foneAluno=?, emailAluno=?, statusAluno=? WHERE idAluno=?");
-    
+
     $atualizar->execute([$aluno, $dtNasc, $rua, $bairro, $cidade, $estado, $cep, $fone, $email, $status, $id]);
 
     header('Location: DashAluno.php');
@@ -58,14 +58,16 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <div class="navbar_menu">
         <img src="..\Assets\images\aeronaves\logo.png" alt="Logo ">
     </div>
+    <div class="etiqueta">
+        <h1>Atualização de Registro do Aluno</h1>
+    </div>
     <div class="container my-4">
-        <h1 class="mb-4">Atualização de Registro do Aluno</h1>
         <div class="card-profile">
-            <?php if (!empty($aluno['fotoAluno']) && file_exists('../Assets/images/' . basename($aluno['fotoAluno']))): ?>
-            <img class="imgPerfil" src="../Assets/images/<?= htmlspecialchars(basename($aluno['fotoAluno'])); ?>"
-                alt="Foto do Aluno">
+            <?php if (!empty($aluno['fotoAluno']) && file_exists('../Assets/images/alunos' . basename($aluno['fotoAluno']))): ?>
+                <img class="imgPerfil" src="../Assets/images/alunos<?= htmlspecialchars(basename($aluno['fotoAluno'])); ?>"
+                    alt="Foto do Aluno">
             <?php else: ?>
-            <img src="../Assets/images/default-avatar.png" alt="Foto do Aluno">
+                <img src="../Assets/images/default-avatar.png" alt="Foto do Aluno">
             <?php endif; ?>
         </div>
         <form method="POST" enctype="multipart/form-data">
@@ -110,30 +112,30 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                     <div class="col col-lg-2">
                         <label for="foneAluno" class="form-label">Telefone</label>
                         <input type="text" class="form-control" id="foneAluno" name="foneAluno"
-                        value="<?php echo htmlspecialchars($aluno['foneAluno']); ?>" required>
+                            value="<?php echo htmlspecialchars($aluno['foneAluno']); ?>" required>
                     </div>
                     <div class="col col-lg-8">
                         <label for="emailAluno" class="form-label">Email</label>
                         <input type="text" class="form-control" id="emailAluno" name="emailAluno"
-                        value="<?php echo htmlspecialchars($aluno['emailAluno']); ?>" required>
+                            value="<?php echo htmlspecialchars($aluno['emailAluno']); ?>" required>
                     </div>
                     <div class="col col-lg-2">
                         <label for="statusAluno" class="form-label">Status</label>
                         <select class="form-select" id="statusAluno" name="statusAluno" required>
                             <option value="Cursando" <?php echo $aluno['statusAluno'] == 'Cursando' ? 'selected' :  ''; ?>>
-                            Cursando
+                                Cursando
                             </option>
                             <option value="Concluido" <?php echo $aluno['statusAluno'] == 'Concluido' ? 'selected' : ''; ?>>
-                            Concluído
+                                Concluído
                             </option>
                         </select>
                     </div>
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Atualizar</button>
-            <a href="DashAluno.php" class="btn btn-secondary">Voltar</a>
+            <a href="menuatualizar.php" class="btn btn-secondary">Voltar</a>
         </form>
-    
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-..."

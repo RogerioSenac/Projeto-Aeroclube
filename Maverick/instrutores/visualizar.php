@@ -50,8 +50,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <div class="container my-4">
         <h1 class="mb-4">Atualização de Cadastro de Instrutor</h1>
         <div class="card-profile">
-            <?php if (!empty($instr['fotoinstr']) && file_exists('../Assets/images/instrutores/' . basename($instr['fotoinstr']))): ?>
-                <img class="imgPerfil" src="../Assets/images/instrutores/<?= htmlspecialchars(basename($instr['fotoinstr'])); ?>"
+            <?php if (!empty($instr['fotoInstr']) && file_exists('../Assets/images/instrutores' . basename($instr['fotoInstr']))): ?>
+                <img class="imgPerfil" src="../Assets/images/instrutores<?= htmlspecialchars(basename($instr['fotoInstr'])); ?>"
                     alt="Foto do Instrutor">
             <?php else: ?>
                 <img src="../Assets/images/default-avatar.png" alt="Foto do Instrutor">

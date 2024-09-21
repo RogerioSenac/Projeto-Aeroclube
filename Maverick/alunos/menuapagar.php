@@ -50,8 +50,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="navbar_menu">
         <img src="../Assets/images/aeronaves/logo.png" alt="Logo">
     </div>
+    <div class="etiqueta">
+        <h1>Lista de Cadastro de Alunos</h1>
+    </div>
+    
     <div class="container my-4">
-        <h1 class="mb-4 text-center">Lista de Cadastro de Alunos</h1>
 
         <!-- Tabela de dados -->
         <table class="table table-dark table-hover">
@@ -81,7 +84,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <td>
                             <a href="apagar.php?id=<?php echo $aluno['idAluno']; ?>" class="btn btn-danger btn-sm"
                                 onclick="return confirm('Tem certeza que deseja deletar este registro?')">Excluir</a>
-
                         </td>
                     </tr>
                 <?php endforeach; ?>
@@ -109,7 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <span aria-hidden="true">Próximo</span>
                     </a>
                 </li>
-                <a href="DashInstrutor.php" class="btn btn-secondary">Voltar</a>
+                <a href="DashAluno.php" class="btn btn-secondary">Voltar</a>
             </ul>
         </nav>
     </div>

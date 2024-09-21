@@ -72,9 +72,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <tr>
                         <td><?php echo htmlspecialchars($instr['idInstr']) ?></td>
                         <td>
-                            <?php if (!empty($instr['fotoInstr']) && file_exists('../Assets/images/' . basename($aluno['fotoAluno']))): ?>
-                                <img src="../Assets/images/instrutores<?= htmlspecialchars(basename($aluno['fotoInstr'])); ?>"
-                                    alt="Foto do Instrutor" class="foto-aluno">
+                            <?php
+                            // Definir o caminho completo da foto do instrutor
+                            $caminhoFoto = '../Assets/images/instrutores/' . basename($instr['fotoInstr']);
+                            if (!empty($instr['fotoInstr']) && file_exists($caminhoFoto)): ?>
+                                <img src="<?php echo htmlspecialchars($caminhoFoto); ?>" 
+                                     alt="Foto do Instrutor" class="foto-aluno">
                             <?php else: ?>
                                 <span>N/A</span>
                             <?php endif; ?>

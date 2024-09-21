@@ -21,7 +21,9 @@ include("../conexao.php");
     <div class="navbar_menu">
         <img src="..\Assets\images\aeronaves\logo.png" alt="Logo ">
     </div>
-    <h1>Controle de Registro de Alunos</h1>
+    <div class="etiqueta">
+        <h1>Controle de Registro de Alunos</h1>
+    </div>
 
     <div class="container">
         <div class="row">

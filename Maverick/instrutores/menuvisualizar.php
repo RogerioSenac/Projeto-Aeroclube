@@ -72,8 +72,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <tr>
                         <td><?php echo htmlspecialchars($instr['idInstr']) ?></td>
                         <td>
-                            <?php if (!empty($instr['fotoInstr']) && file_exists('../Assets/images/' . basename($aluno['fotoAluno']))): ?>
-                                <img src="../Assets/images/instrutores<?= htmlspecialchars(basename($aluno['fotoInstr'])); ?>"
+                            <?php if (!empty($instr['fotoInstr']) && file_exists('../Assets/images/instrutores' . basename($instr['fotoInstr']))): ?>
+                                <img src="../Assets/images/instrutores<?= htmlspecialchars(basename($instr['fotoInstr'])); ?>"
                                     alt="Foto do Instrutor" class="foto-aluno">
                             <?php else: ?>
                                 <span>N/A</span>
