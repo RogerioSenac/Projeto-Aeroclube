@@ -1,5 +1,4 @@
 <?php
-
 include("../conexao.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -18,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Diretório onde a imagem será salva
     $diretorioImagem = '../Assets/images/instrutores/';
-    $nomeImagem = basename($foto['name']);
+    $nomeImagem = uniqid() . '-' . basename($foto['name']);
     $caminhoImagem = $diretorioImagem . $nomeImagem;
 
     // Verifica se o arquivo enviado é uma imagem válida
@@ -50,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ':cepInstr' => $cep,
             ':foneInstr' => $fone,
             ':emailInstr' => $email,
-            ':fotoInstr' => $caminhoImagem
+            ':fotoInstr' => $nomeImagem
         ]);
 
         // Redireciona para a página de sucesso
@@ -65,7 +64,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -75,64 +73,64 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../Assets/CSS/estilo.css">
-    <title>Academy Maverick - Novo Resgistro de Instrutor</title>
+    <title>Academy Maverick - Novo Registro de Instrutor</title>
 </head>
 
 <body>
     <div class="navbar_menu">
-        <img src="..\Assets\images\aeronaves\logo.png" alt="Logo ">
+        <img src="../Assets/images/aeronaves/logo.png" alt="Logo">
     </div>
     <div class="container my-4">
         <h1 class="mb-4">Novo Registro de Instrutor</h1>
         <form method="POST" enctype="multipart/form-data">
             <div class="row justify-content-md-center">
                 <div class="col col-lg-12">
-                    <label form="nomeInstr" class="form-label">Nome</label>
+                    <label for="nomeInstr" class="form-label">Nome</label>
                     <input type="text" class="form-control" id="nomeInstr" name="nomeInstr" required>
                 </div>
                 <div class="col col-lg-4">
-                    <label form="dataNascInstr" class="form-label">Data Nascimento</label>
-                    <input type="text" class="form-control" id="dataNascInstr" name="dataNascInstr" required>
+                    <label for="dataNascInstr" class="form-label">Data Nascimento</label>
+                    <input type="date" class="form-control" id="dataNascInstr" name="dataNascInstr" required>
                 </div>
                 <div class="col col-lg-4">
-                    <label form="matriculaInstr" class="form-label">Matricula</label>
+                    <label for="matriculaInstr" class="form-label">Matrícula</label>
                     <input type="text" class="form-control" id="matriculaInstr" name="matriculaInstr" required>
                 </div>
                 <div class="col col-lg-4">
-                    <label form="breveInstr" class="form-label">Breve</label>
+                    <label for="breveInstr" class="form-label">Breve</label>
                     <input type="text" class="form-control" id="breveInstr" name="breveInstr" required>
                 </div>
                 <div class="col col-lg-6">
-                    <label form="endInstr" class="form-label">Rua/Av.</label>
+                    <label for="endInstr" class="form-label">Rua/Av.</label>
                     <input type="text" class="form-control" id="endInstr" name="endInstr" required>
                 </div>
                 <div class="col col-lg-6">
-                    <label form="bairroInstr" class="form-label">Bairro</label>
+                    <label for="bairroInstr" class="form-label">Bairro</label>
                     <input type="text" class="form-control" id="bairroInstr" name="bairroInstr" required>
                 </div>
                 <div class="col col-lg-4">
-                    <label form="cityInstr" class="form-label">Cidade</label>
+                    <label for="cityInstr" class="form-label">Cidade</label>
                     <input type="text" class="form-control" id="cityInstr" name="cityInstr" required>
                 </div>
                 <div class="col col-lg-4">
-                    <label form="estadoInstr" class="form-label">Estado</label>
+                    <label for="estadoInstr" class="form-label">Estado</label>
                     <input type="text" class="form-control" id="estadoInstr" name="estadoInstr" required>
                 </div>
                 <div class="col col-lg-4">
-                    <label form="cepInstr" class="form-label">Cep</label>
+                    <label for="cepInstr" class="form-label">CEP</label>
                     <input type="text" class="form-control" id="cepInstr" name="cepInstr" required>
                 </div>
                 <div class="col col-lg-6">
-                    <label form="foneInstr" class="form-label">Fone</label>
-                    <input type="text" class="form-control" id="foneInstr" name="foneInstr" required>
+                    <label for="foneInstr" class="form-label">Fone</label>
+                    <input type="tel" class="form-control" id="foneInstr" name="foneInstr" required>
                 </div>
                 <div class="col col-lg-6">
-                    <label form="emailInstr" class="form-label">Email</label>
-                    <input type="text" class="form-control" id="emailInstr" name="emailInstr" required>
+                    <label for="emailInstr" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="emailInstr" name="emailInstr" required>
                 </div>
                 <div class="col col-lg-12">
                     <label for="fotoInstr" class="form-label">Foto do Instrutor</label>
-                    <input type="file" class="form-control" id="fotoInstr" name="fotoInstr" accept="image/*">
+                    <input type="file" class="form-control" id="fotoInstr" name="fotoInstr" accept="image/*" required>
                 </div>
                 <div class="mb-4">
                     <button type="submit" class="btn btn-success">Gravar</button>
@@ -141,6 +139,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
         </form>
     </div>
+
+    <script>
+        document.getElementById('foneInstr').addEventListener('input', function (e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 10) {
+                value = value.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+            } else {
+                value = value.replace(/(\d{2})(\d{4})(\d+)/, '($1) $2-$3');
+            }
+            e.target.value = value;
+        });
+    </script>
 </body>
 
 </html>
