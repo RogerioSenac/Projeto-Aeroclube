@@ -55,11 +55,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <div class="navbar_menu">
         <img src="../Assets/images/aeronaves/logo.png" alt="Logo">
     </div>
+    <div class="etiqueta">
+        <h1>Atualização de Cadastro de Instrutor</h1>
+    </div>
     <div class="container my-4">
-        <h1 class="mb-4">Atualização de Cadastro de Instrutor</h1>
         <div class="card-profile">
-            <?php if (!empty($instr['fotoInstr']) && file_exists('../Assets/images/instrutores' . basename($instr['fotoInstr']))): ?>
-                <img class="imgPerfil" src="../Assets/images/instrutores<?= htmlspecialchars(basename($instr['fotoInstr'])); ?>" alt="Foto do Instrutor">
+            <?php if (!empty($instr['fotoInstr']) && file_exists('../Assets/images/instrutores/' . basename($instr['fotoInstr']))): ?>
+                <img class="imgPerfil" src="../Assets/images/instrutores/<?= htmlspecialchars(basename($instr['fotoInstr'])); ?>" alt="Foto do Instrutor">
             <?php else: ?>
                 <img src="../Assets/images/default-avatar.png" alt="Foto do Instrutor">
             <?php endif; ?>
@@ -73,10 +75,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                     </div>
                     <div class="col col-lg-2">
                         <label for="dataNascInstr" class="form-label">Dt Nascimento</label>
-                        <input type="text" class="form-control" id="dataNascInstr" name="dataNascInstr" value="<?php echo htmlspecialchars($instr['dataNascInstr']); ?>" required>
+                        <input type="date" class="form-control" id="dataNascInstr" name="dataNascInstr" value="<?php echo htmlspecialchars($instr['dataNascInstr']); ?>" required>
                     </div>
                     <div class="col col-lg-4">
-                        <label for="matriculaInstr" class="form-label">Matricula</label>
+                        <label for="matriculaInstr" class="form-label">Matrícula</label>
                         <input type="text" class="form-control input-custom-width" id="matriculaInstr" name="matriculaInstr" value="<?php echo htmlspecialchars($instr['matriculaInstr']); ?>" required>
                     </div>
                     <div class="col col-lg-4">
@@ -121,8 +123,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                     </div>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Atualizar</button>
-            <a href="DashInstrutor.php" class="btn btn-secondary">Voltar</a>
+            <div class="mb-4">
+                <button type="submit" class="btn btn-primary">Atualizar</button>
+                <a href="DashInstrutor.php" class="btn btn-secondary">Voltar</a>
+            </div>
         </form>
     </div>
 

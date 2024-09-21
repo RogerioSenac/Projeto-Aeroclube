@@ -80,9 +80,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="navbar_menu">
         <img src="../Assets/images/aeronaves/logo.png" alt="Logo">
     </div>
+    <div class="etiqueta">
+        <h1>Novo Registro de Instrutor</h1>
+    </div>
     <div class="container my-4">
-        <h1 class="mb-4">Novo Registro de Instrutor</h1>
-        <form method="POST" enctype="multipart/form-data">
+    <form method="POST" enctype="multipart/form-data">
             <div class="row justify-content-md-center">
                 <div class="col col-lg-12">
                     <label for="nomeInstr" class="form-label">Nome</label>

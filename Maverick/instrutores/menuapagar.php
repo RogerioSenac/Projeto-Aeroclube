@@ -53,8 +53,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="navbar_menu">
             <img src="../Assets/images/aeronaves/logo.png" alt="Logo">
         </div>
-
-        <h1 class="mb-4 text-center">Lista de Cadastro de Instrutores</h1>
+    <div class="etiqueta">
+        <h1>Lista de Cadastro de Instrutores</h1>
+    </div>
 
         <!-- Tabela de dados -->
         <table class="table table-dark table-hover">
