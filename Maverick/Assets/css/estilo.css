@@ -152,6 +152,10 @@ h1 {
     border: none;
 }
 
+.mb-4 {
+    padding: 10px;
+}
+
 /*Inicio dos Estilos da tela Consulta Alunos*/
 
 .card-profile {
@@ -237,9 +241,7 @@ span.alerta {
     text-shadow: 2px 2px 3px #00014F;
 } */
 
-/* .mb-4 {
-    margin-top: 0px;
-} */
+
 
 /* .btn-danger {
     margin-top: -100px;

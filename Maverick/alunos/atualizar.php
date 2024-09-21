@@ -63,8 +63,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     </div>
     <div class="container my-4">
         <div class="card-profile">
-            <?php if (!empty($aluno['fotoAluno']) && file_exists('../Assets/images/alunos' . basename($aluno['fotoAluno']))): ?>
-                <img class="imgPerfil" src="../Assets/images/alunos<?= htmlspecialchars(basename($aluno['fotoAluno'])); ?>"
+            <?php if (!empty($aluno['fotoAluno']) && file_exists('../Assets/images/alunos/' . basename($aluno['fotoAluno']))): ?>
+                <img class="imgPerfil" src="../Assets/images/alunos/<?= htmlspecialchars(basename($aluno['fotoAluno'])); ?>"
                     alt="Foto do Aluno">
             <?php else: ?>
                 <img src="../Assets/images/default-avatar.png" alt="Foto do Aluno">
@@ -132,8 +132,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                     </div>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Atualizar</button>
-            <a href="menuatualizar.php" class="btn btn-secondary">Voltar</a>
+            <div class="mb-4">
+                <button type="submit" class="btn btn-primary">Atualizar</button>
+                <a href="menuatualizar.php" class="btn btn-secondary">Voltar</a>
+            </div>
         </form>
 
     </div>
