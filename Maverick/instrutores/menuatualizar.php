@@ -5,7 +5,7 @@ include("../conexao.php");
 $regPorPagina = 10;
 
 // Obtenha o número da página atual a partir da URL (ou defina como 1 se não estiver definido)
-$paginaAtual = isset($_GET['pagina']) ? (int) $_GET['pagina'] : 1;
+$paginaAtual = isset($_GET['pagina']) ? (int)$_GET['pagina'] : 1;
 
 // Calcule o offset
 $offset = ($paginaAtual - 1) * $regPorPagina;
@@ -72,9 +72,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <tr>
                         <td><?php echo htmlspecialchars($instr['idInstr']) ?></td>
                         <td>
-                            <?php if (!empty($instr['fotoInstr']) && file_exists('../Assets/images/' . basename($aluno['fotoAluno']))): ?>
-                                <img src="../Assets/images/instrutores<?= htmlspecialchars(basename($aluno['fotoInstr'])); ?>"
-                                    alt="Foto do Instrutor" class="foto-aluno">
+                            <?php
+                            // Definir o caminho completo da foto do instrutor
+                            $caminhoFoto = '../Assets/images/instrutores/' . basename($instr['fotoInstr']);
+                            if (!empty($instr['fotoInstr']) && file_exists($caminhoFoto)): ?>
+                                <img src="<?php echo htmlspecialchars($caminhoFoto); ?>" 
+                                     alt="Foto do Instrutor" class="foto-aluno">
                             <?php else: ?>
                                 <span>N/A</span>
                             <?php endif; ?>
@@ -82,8 +85,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <td><?php echo htmlspecialchars($instr['nomeInstr']) ?></td>
                         <td><?php echo htmlspecialchars($instr['statusInstr']) ?></td>
                         <td>
-                            <a href="atualizar.php?id=<?php echo $instr['idInstr']; ?>"
-                                class="btn btn-info btn-sm">Atualização</a>
+                            <a href="atualizar.php?id=<?php echo $instr['idInstr']; ?>" 
+                               class="btn btn-info btn-sm">Atualização</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
@@ -93,9 +96,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <!-- Controles de Navegação -->
         <nav aria-label="Page navigation">
             <ul class="pagination justify-content-center">
-                <li class="page-item">
-
-                </li>
+                <li class="page-item"></li>
                 <li class="page-item <?= $paginaAtual <= 1 ? 'disabled' : '' ?>">
                     <a class="page-link" href="?pagina=<?= $paginaAtual - 1 ?>" aria-label="Previous">
                         <span aria-hidden="true">Anterior</span>

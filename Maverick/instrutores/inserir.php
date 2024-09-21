@@ -14,21 +14,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cep = $_POST['cepInstr'];
     $fone = $_POST['foneInstr'];
     $email = $_POST['emailInstr'];
-    $foto = $_FILES['fotoInstr']; // Use $_FILES para o upload de arquivos
+    $foto = $_FILES['fotoInstr'];
 
     // Diretório onde a imagem será salva
-    $diretorioImagem = '../Assets/images/instrutores';
+    $diretorioImagem = '../Assets/images/instrutores/';
     $nomeImagem = basename($foto['name']);
     $caminhoImagem = $diretorioImagem . $nomeImagem;
+
+    // Verifica se o arquivo enviado é uma imagem válida
+    $extensoesPermitidas = ['jpg', 'jpeg', 'png', 'gif'];
+    $extensaoArquivo = strtolower(pathinfo($nomeImagem, PATHINFO_EXTENSION));
+
+    if (!in_array($extensaoArquivo, $extensoesPermitidas)) {
+        header("Location: DashInstrutor.php?message=Formato de imagem inválido.");
+        exit();
+    }
 
     // Verifica se o upload foi bem-sucedido
     if (move_uploaded_file($foto['tmp_name'], $caminhoImagem)) {
         // Preparar e executar a consulta SQL para inserir os dados
         $stmt = $conexao->prepare("
-        INSERT INTO intrutores (nomeInstr, dataNascInstr, matriculaInstr, breveInstr, endInstr, bairroInstr, cityInstr, estadoInstr, cepInstr, foneInstr, emaiInstr, fotoInstr) 
-        VALUES (:nomeinstr,:dataNascInstr,:matriculaInstr,:breveInstr,:endInstr,:bairroInstr,:cityInstr,:estadoInstr,:cepInstr,:foneInstr,:emailInstr,:fotoInstr)");
+        INSERT INTO instrutores (nomeInstr, dataNascInstr, matriculaInstr, breveInstr, endInstr, bairroInstr, cityInstr, estadoInstr, cepInstr, foneInstr, emailInstr, fotoInstr) 
+        VALUES (:nomeInstr, :dataNascInstr, :matriculaInstr, :breveInstr, :endInstr, :bairroInstr, :cityInstr, :estadoInstr, :cepInstr, :foneInstr, :emailInstr, :fotoInstr)");
 
-        // Certifique-se de definir as variáveis $dtNasc e $estadoAluno
+        // Executar a consulta
         $stmt->execute([
             ':nomeInstr' => $nome,
             ':dataNascInstr' => $dtNasc,
@@ -38,23 +47,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             ':bairroInstr' => $bairro,
             ':cityInstr' => $cidade,
             ':estadoInstr' => $estado,
-            ':cepINstr' => $cep,
+            ':cepInstr' => $cep,
             ':foneInstr' => $fone,
             ':emailInstr' => $email,
             ':fotoInstr' => $caminhoImagem
         ]);
 
-        // Redireciona para a página de cadastro com uma mensagem de sucesso
+        // Redireciona para a página de sucesso
         $idInstr = $conexao->lastInsertId();
         header("Location: DashInstrutor.php?id=$idInstr&message=Instrutor cadastrado com sucesso!");
         exit();
     } else {
-        // Redireciona para a página de cadastro com uma mensagem de erro
+        // Redireciona para a página de erro
         header("Location: DashInstrutor.php?message=Erro ao fazer upload da imagem.");
         exit();
     }
 }
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-br">
