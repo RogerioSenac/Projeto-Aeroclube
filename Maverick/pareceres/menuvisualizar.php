@@ -47,22 +47,13 @@ $exibirAlunos = $buscarAlunos->fetchAll(PDO::FETCH_ASSOC);
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../Assets/CSS/estilo.css">
     <title>Academy Maverick - Controle de Registros de Voos</title>
-    <style>
-        h1 {
-            text-align: center;
-            margin-bottom: 2rem;
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #343a40;
-        }
-    </style>
 </head>
 
 <body>
     <div class="navbar_menu">
         <img src="../Assets/images/aeronaves/logo.png" alt="Logo">
     </div>
-    <div class="mensagem">
+    <div class="etiqueta">
         <h1>Registro de Históricos de Pareceres de Voos dos Alunos</h1>
     </div>
     <div class="container">
@@ -116,7 +107,7 @@ $exibirAlunos = $buscarAlunos->fetchAll(PDO::FETCH_ASSOC);
                     </a>
                 </li>
             </ul>
-            <div class="botao">
+            <div class="mb-4">
                 <a href="../menu.php" class="btn btn-secondary">Voltar</a>
             </div>
         </nav>

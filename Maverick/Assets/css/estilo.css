@@ -77,11 +77,6 @@ h1 {
     font-size: 1.1rem;
 }
 
-.mensagem h1 {
-    color: #fff;
-    margin-top: -100px;
-    margin-left: 150px;
-}
 
 .form-label {
     margin-top: 10px;
@@ -91,14 +86,6 @@ h1 {
 
 .btn-secondary {
     margin-left: 10px;
-}
-
-.botao {
-    margin-top: -55px;
-}
-
-.container {
-    margin-top: 90px;
 }
 
 .nome-aluno {
@@ -234,8 +221,6 @@ span.alerta {
     text-shadow: 2px 2px 3px #00014F;
 } */
 
-
-
 /* .btn-danger {
     margin-top: -100px;
     margin-right: 50px;
@@ -262,4 +247,18 @@ span.alerta {
     margin-bottom: -30px;
     margin-left: -13px;
     margin-right: -13px;
+} */
+
+/* .mensagem h1 {
+    color: #fff;
+    margin-top: -100px;
+    margin-left: 150px;
+} */
+
+/* .botao {
+    margin-top: -55px;
+} */
+
+/* .container {
+    margin-top: 0px;
 } */
