@@ -29,8 +29,8 @@ $aluno = $buscarAluno->fetch(PDO::FETCH_ASSOC);
     </div>
     <div class="container my-4">
         <div class="card-profile">
-            <?php if (!empty($aluno['fotoAluno']) && file_exists('../Assets/images/' . basename($aluno['fotoAluno']))): ?>
-            <img class="imgPerfil" src="../Assets/images/<?= htmlspecialchars(basename($aluno['fotoAluno'])); ?>"
+            <?php if (!empty($aluno['fotoAluno']) && file_exists('../Assets/images/alunos/' . basename($aluno['fotoAluno']))): ?>
+            <img class="imgPerfil" src="../Assets/images/alunos/<?= htmlspecialchars(basename($aluno['fotoAluno'])); ?>"
                 alt="Foto do Aluno">
             <?php else: ?>
             <img src="../Assets/images/default-avatar.png" alt="Foto do Aluno">
@@ -95,7 +95,7 @@ $aluno = $buscarAluno->fetch(PDO::FETCH_ASSOC);
                 </div>
             </div>
         </form>
-        <div class="text-center my-4">
+        <div class="mb-4">
             <a href="menuvisualizar.php" class="btn btn-secondary">Voltar</a>
         </div>
     </div>
