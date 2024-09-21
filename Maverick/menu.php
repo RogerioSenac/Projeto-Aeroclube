@@ -40,7 +40,7 @@ $usuario = $_SESSION['usuario']; // Atribui o valor do usuário logado à variá
         <div class="row">
             <!-- Card 1 -->
             <div class="col-md-4 mb-4">
-                <div class="card">
+                <div class="card card-um">
                     <img class="card-img-top" src="Assets/images/aeronaves/aviao1.jpg">
                     <div class="card-body">
                         <h1 class="card-text">Controle de Alunos da Academia.</h1>
@@ -51,7 +51,7 @@ $usuario = $_SESSION['usuario']; // Atribui o valor do usuário logado à variá
 
             <!-- Card 2 -->
             <div class="col-md-4 mb-4">
-                <div class="card">
+                <div class="card card-um">
                     <img class="card-img-top" src="Assets/images/aeronaves/aviao1.jpg">
                     <div class="card-body">
                         <h1 class="card-text">Controle de Instrutores da academia.</h1>
@@ -62,7 +62,7 @@ $usuario = $_SESSION['usuario']; // Atribui o valor do usuário logado à variá
 
             <!-- Card 3 -->
             <div class="col-md-4 mb-4">
-                <div class="card">
+                <div class="card card-um">
                     <img class="card-img-top" src="Assets/images/aeronaves/aviao1.jpg">
                     <div class="card-body">
                         <h1 class="card-text">Controle dos Registros de Voos.</h1>
@@ -73,7 +73,7 @@ $usuario = $_SESSION['usuario']; // Atribui o valor do usuário logado à variá
 
             <!-- Card 4 -->
             <div class="col-md-4 mb-4">
-                <div class="card">
+                <div class="card card-um">
                     <img class="card-img-top" src="Assets/images/aeronaves/aviao1.jpg">
                     <div class="card-body">
                         <h1 class="card-text">Controle dos Pareceres de Voos.</h1>
@@ -84,7 +84,7 @@ $usuario = $_SESSION['usuario']; // Atribui o valor do usuário logado à variá
 
             <!-- Card 5 -->
             <div class="col-md-4 mb-4">
-                <div class="card">
+                <div class="card card-um">
                     <img class="card-img-top" src="Assets/images/aeronaves/aviao1.jpg">
                     <div class="card-body">
                         <h1 class="card-text">Adicione novas formações.</h1>
@@ -95,7 +95,7 @@ $usuario = $_SESSION['usuario']; // Atribui o valor do usuário logado à variá
 
             <!-- Card 6 -->
             <div class="col-md-4 mb-4">
-                <div class="card">
+                <div class="card card-um">
                     <img class="card-img-top" src="Assets/images/aeronaves/aviao1.jpg">
                     <div class="card-body">
                         <h1 class="card-text">Gerencie os novos breves.</h1>
