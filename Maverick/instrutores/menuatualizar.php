@@ -53,8 +53,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="navbar_menu">
             <img src="../Assets/images/aeronaves/logo.png" alt="Logo">
         </div>
-
-        <h1 class="mb-4 text-center">Lista de Registro de Instrutores</h1>
+        <div class="etiqueta">
+            <h1>Lista de Registro de Instrutores</h1>
+        </div>
 
         <!-- Tabela de dados -->
         <table class="table table-dark table-hover">
@@ -76,8 +77,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             // Definir o caminho completo da foto do instrutor
                             $caminhoFoto = '../Assets/images/instrutores/' . basename($instr['fotoInstr']);
                             if (!empty($instr['fotoInstr']) && file_exists($caminhoFoto)): ?>
-                                <img src="<?php echo htmlspecialchars($caminhoFoto); ?>" 
-                                     alt="Foto do Instrutor" class="foto-aluno">
+                                <img src="<?php echo htmlspecialchars($caminhoFoto); ?>"
+                                    alt="Foto do Instrutor" class="foto-aluno">
                             <?php else: ?>
                                 <span>N/A</span>
                             <?php endif; ?>
@@ -85,8 +86,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <td><?php echo htmlspecialchars($instr['nomeInstr']) ?></td>
                         <td><?php echo htmlspecialchars($instr['statusInstr']) ?></td>
                         <td>
-                            <a href="atualizar.php?id=<?php echo $instr['idInstr']; ?>" 
-                               class="btn btn-info btn-sm">Atualização</a>
+                            <a href="atualizar.php?id=<?php echo $instr['idInstr']; ?>"
+                                class="btn btn-info btn-sm">Atualização</a>
                         </td>
                     </tr>
                 <?php endforeach; ?>
