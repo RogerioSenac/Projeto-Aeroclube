@@ -10,6 +10,7 @@ include("../conexao.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="../Assets/css/estilo.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Escola Aviação Maverick</title>
     <style>
@@ -22,19 +23,19 @@ include("../conexao.php");
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        .card-icon {
+        /* .card-icon {
             font-size: 2rem;
             margin-bottom: 1rem;
-        }
+        } */
 
-        h1 {
+        /* h1 {
             text-align: center;
             margin-bottom: 2rem;
             font-size: 2.5rem;
             font-weight: bold;
             color: #343a40;
             /* Cor escura para contraste */
-        }
+        } */
     </style>
 </head>
 
@@ -46,7 +47,7 @@ include("../conexao.php");
             <div class="col-md-3 mb-3">
                 <div class="card text-center">
                     <div class="card-body">
-                    <i class="fa-xl fa-solid fa-address-card"></i>
+                        <i class="fa-xl fa-solid fa-address-card"></i>
                         <h5 class="card-title">Inclusão</h5>
                         <p class="card-text">Incluir registro.</p>
                         <a href="inserir.php" class="btn btn-primary">Acessar</a>
@@ -58,7 +59,7 @@ include("../conexao.php");
             <div class="col-md-3 mb-3">
                 <div class="card text-center">
                     <div class="card-body">
-                    <i class="fa-xl fa-solid fa-clipboard-check"></i>
+                        <i class="fa-xl fa-solid fa-clipboard-check"></i>
                         <h5 class="card-title">Atualização</h5>
                         <p class="card-text">Atualizar registro.</p>
                         <a href="menuatualizar.php" class="btn btn-primary">Acessar</a>
