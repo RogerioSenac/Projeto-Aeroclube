@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="navbar_menu">
         <img src="../Assets/images/aeronaves/logo.png" alt="Logo">
     </div>
-    <div class="mensagem">
+    <div class="etiqueta">
         <h1>Registro de Novas Formações</h1>
     </div>
     <div class="container">
@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <label form="nomeFormacao" class="form-label">Nova Formação</label>
                 <input type="text" class="form-control" id="nomeFormacao" name="nomeFormacao" required>
             </div>
-            <div class="mb-3">
+            <div class="mb-4">
                 <button type="submit" class="btn btn-success">Gravar</button>
                 <a href="DashFormacao.php" class="btn btn-secondary">Voltar</a>
             </div>

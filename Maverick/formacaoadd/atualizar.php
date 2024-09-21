@@ -28,25 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <link rel="stylesheet" href="../Assets/CSS/estilo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Escola Aviação Maverick</title>
-    <style>
-        .input-label-wrapper {
-            display: flex;
-            align-items: center;
-            /* Alinha verticalmente */
-            gap: 10px;
-            /* Espaçamento entre o input e a label */
-        }
-
-        .input-custom-width {
-            width: auto;
-            /* Define a largura do input como 20 pixels */
-        }
-
-        .form-label {
-            margin: 0;
-            /* Remove margens adicionais se necessário */
-        }
-    </style>
+  
     <title>Academy Maverick - Atualizacao de Registro de Formacão</title>
 </head>
 
@@ -54,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <div class="navbar_menu">
         <img src="../Assets/images/aeronaves/logo.png" alt="Logo">
     </div>
-    <div class="mensagem">
+    <div class="etiqueta">
         <h1>Controle de Formações de Voos</h1>
     </div>
     <div class="container">
