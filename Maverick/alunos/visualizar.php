@@ -24,8 +24,10 @@ $aluno = $buscarAluno->fetch(PDO::FETCH_ASSOC);
     <div class="navbar_menu">
         <img src="..\Assets\images\aeronaves\logo.png" alt="Logo ">
     </div>
+    <div class="etiqueta">
+        <h1>Consulta de dados do Registro de Alunos</h1>
+    </div>
     <div class="container my-4">
-        <h1 class="mb-4">Consulta de dados do Registro de Alunos</h1>
         <div class="card-profile">
             <?php if (!empty($aluno['fotoAluno']) && file_exists('../Assets/images/' . basename($aluno['fotoAluno']))): ?>
             <img class="imgPerfil" src="../Assets/images/<?= htmlspecialchars(basename($aluno['fotoAluno'])); ?>"
@@ -94,7 +96,7 @@ $aluno = $buscarAluno->fetch(PDO::FETCH_ASSOC);
             </div>
         </form>
         <div class="text-center my-4">
-            <a href="DashAluno.php" class="btn btn-secondary">Voltar</a>
+            <a href="menuvisualizar.php" class="btn btn-secondary">Voltar</a>
         </div>
     </div>
 

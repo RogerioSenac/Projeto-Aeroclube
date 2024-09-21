@@ -18,6 +18,10 @@ body {
     margin-bottom: 1rem;
 }
 
+.etiqueta h1{
+    color: #fff;
+}
+
 h1 {
     text-align: center;
     margin-bottom: 2rem;
@@ -56,7 +60,6 @@ h1 {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-
 .card-body {
     position: absolute;
     /* background: rgba(123, 171, 201, 0.20); */
@@ -84,11 +87,6 @@ h1 {
     margin-top: 10px;
     font-weight: bold;
     color: #fff;
-}
-
-.btn-danger {
-    margin-top: -100px;
-    margin-right: 50px;
 }
 
 .btn-secondary {
@@ -131,10 +129,6 @@ h1 {
     margin: 3px;
 }
 
-/* .mb-4 {
-    margin-top: 0px;
-} */
-
 .foto-aluno {
     width: 30px;
     height: 30px;
@@ -151,18 +145,12 @@ h1 {
     margin-top: 60px;
 }
 
-.table th,
-.table td {
-    text-align: center;
-}
-
 .page-link {
 
     background-color: #00013E;
     color: #fff;
     border: none;
 }
-
 
 /*Inicio dos Estilos da tela Consulta Alunos*/
 
@@ -226,17 +214,6 @@ h1 {
     outline: 0;
 }
 
-/* .btn-primary {
-    margin-left: 10px;
-    margin-top: 20px;
-} */
-
-.tr td {
-    color: #fff;
-    background-color: #fff;
-}
-
-
 /*Inicio dos Estilos da tela Alerta Senha*/
 
 span.alerta {
@@ -258,4 +235,28 @@ span.alerta {
     font-family: 'topgun', sans-serif;
     color: #D13B3C;
     text-shadow: 2px 2px 3px #00014F;
+} */
+
+/* .mb-4 {
+    margin-top: 0px;
+} */
+
+/* .btn-danger {
+    margin-top: -100px;
+    margin-right: 50px;
+} */
+
+/* .btn-primary {
+    margin-left: 10px;
+    margin-top: 20px;
+} */
+
+/* .tr td {
+    color: #fff;
+    background-color: #fff;
+} */
+
+/* .table th,
+.table td {
+    text-align: center;
 } */

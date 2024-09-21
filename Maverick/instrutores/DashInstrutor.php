@@ -23,7 +23,9 @@ include("../conexao.php");
             <img src="..\Assets\images\aeronaves\logo.png" alt="Logo ">
         </div>
         <div class="container my-4">
-            <h1>Controle de Registro de Instrutores</h1>
+            <div class="etiqueta">
+                <h1>Controle de Registro de Instrutores</h1>
+            </div>
             <div class="row">
                 <!-- Card 1 -->
                 <div class="col-md-3 mb-3">
