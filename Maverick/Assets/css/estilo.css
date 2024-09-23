@@ -2,9 +2,11 @@ body {
     background-color: #00013E;
 }
 
-.card {
+.text-center {
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     align-items: center;
+    height: 220px;
+    background-color: #fff;
 }
 
 .card:hover {
@@ -44,7 +46,7 @@ h1 {
  
 }
 
-.card {
+.card-um {
     width: 350px;
     height: 180px;
     position: relative;
