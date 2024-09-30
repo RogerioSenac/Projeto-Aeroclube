@@ -13,6 +13,30 @@ include("../conexao.php");
     <link rel="stylesheet" href="../Assets/css/estilo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Escola Aviação Maverick</title>
+    <style>
+        .card {
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* .card-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        } */
+
+        /* h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #343a40;
+            /* Cor escura para contraste */
+        } */
+    </style>
 </head>
 
 <body>
