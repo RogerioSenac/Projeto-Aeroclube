@@ -79,30 +79,30 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                     </div>
                     <div class="col col-lg-4">
                         <label for="matriculaInstr" class="form-label">Matrícula</label>
-                        <input type="text" class="form-control input-custom-width" id="matriculaInstr" name="matriculaInstr" value="<?php echo htmlspecialchars($instr['matriculaInstr']); ?>" required>
+                        <input type="text" class="form-control" id="matriculaInstr" name="matriculaInstr" value="<?php echo htmlspecialchars($instr['matriculaInstr']); ?>" required>
                     </div>
                     <div class="col col-lg-4">
                         <label for="breveInstr" class="form-label">Breve</label>
-                        <input type="text" class="form-control input-custom-width" id="breveInstr" name="breveInstr" value="<?php echo htmlspecialchars($instr['breveInstr']); ?>" required>
+                        <input type="text" class="form-control" id="breveInstr" name="breveInstr" value="<?php echo htmlspecialchars($instr['breveInstr']); ?>" required>
                     </div>
                     <div class="col col-lg-4">
                         <label for="statusInstr" class="form-label">Situação</label>
-                        <select class="form-control input-custom-width" id="statusInstr" name="statusInstr" required>
+                        <select class="form-control" id="statusInstr" name="statusInstr" required>
                             <option value="Ativo" <?php echo $instr['statusInstr'] == 'Ativo' ? 'selected' : '' ?>>Ativo</option>
                             <option value="Inativo" <?php echo $instr['statusInstr'] == 'Inativo' ? 'selected' : '' ?>>Inativo</option>
                         </select>
                     </div>
                     <div class="col col-lg-6">
                         <label for="endInstr" class="form-label">Rua/Av.</label>
-                        <input type="text" class="form-control input-custom-width" id="endInstr" name="endInstr" value="<?php echo htmlspecialchars($instr['endInstr']); ?>" required>
+                        <input type="text" class="form-control" id="endInstr" name="endInstr" value="<?php echo htmlspecialchars($instr['endInstr']); ?>" required>
                     </div>
                     <div class="col col-lg-6">
                         <label for="bairroInstr" class="form-label">Bairro</label>
-                        <input type="text" class="form-control input-custom-width" id="bairroInstr" name="bairroInstr" value="<?php echo htmlspecialchars($instr['bairroInstr']); ?>" required>
+                        <input type="text" class="form-control" id="bairroInstr" name="bairroInstr" value="<?php echo htmlspecialchars($instr['bairroInstr']); ?>" required>
                     </div>
                     <div class="col col-lg-4">
                         <label for="cityInstr" class="form-label">Cidade</label>
-                        <input type="text" class="form-control input-custom-width" id="cityInstr" name="cityInstr" value="<?php echo htmlspecialchars($instr['cityInstr']); ?>" required>
+                        <input type="text" class="form-control" id="cityInstr" name="cityInstr" value="<?php echo htmlspecialchars($instr['cityInstr']); ?>" required>
                     </div>
                     <div class="col col-lg-4">
                         <label for="estadoInstr" class="form-label">Estado</label>

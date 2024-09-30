@@ -38,20 +38,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../Assets/css/estilo.css">
     <title>Academy Maverick - Atualização de Registro</title>
-    <!-- <style>
-        .info-row {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px; /* Espaço entre as linhas */
-        }
-        .info-col {
-            flex: 1; /* Cada coluna ocupa espaço igual */
-            margin-right: 2px; /* Espaçamento entre os campos */
-        }
-        .info-col:last-child {
-            margin-right: 0; /* Remove margem do último campo na linha */
-        }
-    </style> -->
 </head>
 
 <body>
