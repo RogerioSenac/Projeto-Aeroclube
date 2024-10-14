@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
     <div class="container">
-    <h1 class="my-4">Lista de Alunoscom Breves Credenciados</h1>
+    <h1 class="my-4">Lista de Alunos com Breves Credenciados</h1>
         <!--Tabela de dados-->
         <table class="table table-sucess table striped">
             <theader>
